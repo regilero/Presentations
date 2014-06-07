@@ -1,0 +1,4 @@
+[submodule "avalanche"]
+	path = avalanche
+	url = https://github.com/akrabat/avalanche.git
+
