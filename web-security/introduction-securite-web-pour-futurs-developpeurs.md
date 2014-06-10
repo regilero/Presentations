@@ -697,7 +697,7 @@ Et il fait une requête SQL pour vérifier que les deux correspondent ... d'une 
 
     !php
     $login = $_POST['login']; $password = $_POST['password'];
-    $sql = "SELECT id FROM users WHERE `login`='$login'";
+    $sql = "SELECT id FROM users WHERE `login`=PASSWORD('$login')";
     $sql .= " and `password`='$password'";
     $result = $db->query($sql);
     if (count( $result) > 0) {
@@ -710,17 +710,18 @@ Le jeu consiste alors à insérer du SQL dans la requête ...
 ## Injection - SQL
 
     !html
-    login      admin
-    password   ' OR '1' = '1
+        login      admin
+        password   ') OR '1' = '1
 
+Ou encore
 
     !html
-    login      '; DROP table users --
+        login      '; DROP table users --
 
 L'injection SQl est très connue car elle est puissante. Elle permet de passer outre les **sécurités d'accès**, de **détruire** ou de modifier des données (UPDATE, INSERT, DELETE, TRUNCATE) voir d'**extraire n'importe quelle information** de la base (requêtes UNION, requête sur information_schema, time-based attacks).
 
 Il existe des moyens de s'en protéger. Certains sont bons, d'autres sont très bons, d'autres très mauvais.
-Nous allons regarder certains de ces moyens puisqu'ils nous permettront de mieux appréhender le chapitre suivant qui parlera justement des protections.
+Nous allons regarder en détails certaines de ces méthodes pour mieux appréhender le chapitre suivant qui parlera justement des protections.
 
 --------------------------------------------------------------------------------
 
@@ -731,9 +732,9 @@ Nous allons regarder certains de ces moyens puisqu'ils nous permettront de mieux
     !php
     "SELECT id FROM users WHERE `login`='"
       . addslashes($login)
-      . "' and `password`='"
+      . "' and `password`=PASSWORD('"
       . addslashes($password)
-      . "'";
+      . "')";
 
 Ceci transforme les quotes ' en \'. C'est **très insuffisant**.
 
@@ -742,9 +743,9 @@ Ceci transforme les quotes ' en \'. C'est **très insuffisant**.
     !php
     "SELECT id FROM users WHERE `login`='"
       . mysql_real_escape_string($login, $db)
-      . "' and `password`='"
+      . "' and `password`=PASSWORD('"
       . mysql_real_escape_string($password, $db)
-      . "'";
+      . "')";
 
 > mysql_real_escape_string() appelle la fonction mysql_escape_string() de la bibliothèque MySQL qui ajoute un anti-slash aux caractères suivants : NULL, \x00, \n, \r, \, ', " et \x1a.
 
@@ -758,7 +759,7 @@ C'est une protection ultime (tant que la librairie qui abstrait votre connexion 
 
     !php
     $sql = "SELECT id FROM users WHERE `login`=:login"
-    $sql .= " and `password`=:pwd";
+    $sql .= " and `password`=PASSWORD(:pwd)";
     $args = array(
       'login' => $_POST['login'],
       'pwd' => $_POST['password']
@@ -820,6 +821,22 @@ Et ceci est un extrait du code qui produit cette requête:
       );
 
 Un code **robuste**, plus verbeux sans doute. Une requête complexifiée. Mais elle est située à un endroit clef en terme de sécurité.
+
+Il y a cependant un piège dans cette requète:
+
+    !sql
+    SELECT *, (CASE WHEN password = 'user \'password'
+       THEN 1 ELSE 0 END) AS zend_auth_credential_match
+    FROM users
+    WHERE name = 'user\' name'
+
+--------------------------------------------------------------------------------
+
+## Injection - SQL
+
+La méthode "_credentielTreatment" n'est sans doute pas définie et la requête se fait en comparant le mote de passe **en clair**.
+
+Il ne devrais **jamais** exister de mots de passe stockés en clair dans une base de donnée. **Jamais**.
 
 --------------------------------------------------------------------------------
 
@@ -1019,13 +1036,14 @@ Pour aujourd'hui, je ne vous ferais pas un cours détaillé sur l'administration
 
 # OpenSSL Heartbleed
 
- * [XKCD](http://xkcd.com/1354/)
+  * [XKCD](http://xkcd.com/1354/)
 
 Sur le SSl l'année est assez chargée, vous pouvez aussi regarder ceci:
 
- * [Faille Apple goto](http://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/)
- * [Quasiment la même chez Debian](http://arstechnica.com/security/2014/03/critical-crypto-bug-leaves-linux-hundreds-of-apps-open-to-eavesdropping/)
- 
+  * [Faille Apple goto](http://nakedsecurity.sophos.com/2014/02/24/anatomy-of-a-goto-fail-apples-ssl-bug-explained-plus-an-unofficial-patch/)
+  * [Quasiment la même chez Debian](http://arstechnica.com/security/2014/03/critical-crypto-bug-leaves-linux-hundreds-of-apps-open-to-eavesdropping/)
+  * [La dernière datant de cette semaine](http://www.numerama.com/magazine/29603-openssl-une-faille-tres-ancienne-corrigeeainsi-que-six-autres.html)
+
 --------------------------------------------------------------------------------
 
 # Github: 5 failles légères combinées

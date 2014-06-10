@@ -10,6 +10,12 @@
 
 }
 
+a, a:visited {
+  color: #A9A9FF;
+}
+a:hover {
+  color: #C5C9F3;
+}
 body {
     font-size: 22px;
     font-family: "helveticaneuelight", Verdana, sans-serif;
@@ -58,7 +64,7 @@ blockquote p {
 }
 
 /* ----- First slide ----- */
-
+/*
 .slides .slide-wrapper:first-child .slide {
   background: url(../logo.png) 283px 375px no-repeat;
 }
@@ -66,7 +72,7 @@ blockquote p {
 .slides .slide-wrapper:first-child .slide header:only-child h1 {
   height: 550px;
 }
-
+*/
 /* ----- Slide with only a quote ----- */
 
 div.slide.quoteslide blockquote {
