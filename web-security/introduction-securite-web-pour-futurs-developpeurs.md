@@ -16,12 +16,12 @@ Ou bien on vous demandera de participer à la réalisation d'un de ces sites.
 
 # Pourquoi?
 
-Mais aussi parce que réfléchir aux problématique de la sécurité pour vos programmes:
+Mais aussi parce que réfléchir aux problématiques de la sécurité pour vos programmes:
 
-  * Est très formateur
-  * Vous demande de lire des documentations 
+  * est très formateur
+  * vous demande de lire des documentations 
     * (et ce type de documents fera rarement partie des livres que vous aurez naturellement envie de lire)
-  * Est amusant
+  * est amusant
 
 --------------------------------------------------------------------------------
 
@@ -68,8 +68,8 @@ Le domaine de la sécurité est très vaste. Il regroupe des éléments plus lar
 
 > Trop de sécurité tue la sécurité.
 
-Quand le niveau de sécurité augmente le niveau de confort descend, le plus souvent. Si le niveau de sécurité en place est trop fort les utilisateurs mettrons en place des moyens dérivés qui ruinerons le travail effectué.
-Une fois que vous aurez acquis des connaissances en terme de sécurité il faudra être capable de les doser et de les relativiser par rapport à une vision plus large du système d'information.
+Quand le niveau de sécurité augmente, le niveau de confort descend (le plus souvent). Si le niveau de sécurité en place est trop fort, les utilisateurs mettrons en place des moyens dérivés qui ruinerons le travail effectué.
+Une fois que vous aurez acquis des connaissances en terme de sécurité, il faudra être capable de les doser et de les relativiser par rapport à une vision plus large du système d'information.
 
 ![trouver le juste niveau difficile il sera](./too_much_security.jpg)
 
@@ -93,9 +93,9 @@ Mais attention à ne pas sous-doser.
 
 # Les pédos-nazis de l'Internet
 
-L'immense majorité des attaques informatiques *réussies* ne proviennent pas d'anonymes sur internet. elles sont le plus souvent effectuées en **interne**, par vengeance, par frustration, etc.
+L'immense majorité des attaques informatiques *réussies* ne proviennent pas d'anonymes sur internet. Elles sont le plus souvent effectuées en **interne**, par vengeance, par frustration, etc.
 
-En dehors des robots qui scannent l'intégralité du net à la recherche de failles connues il ne faut pas négliger le potentiel de nuissance des utilisateurs *autorisés* de l'application. (Ce qui peut être aggravé aussi par les risques de mauvaises manipulations pour les rôles utilisateurs qui possèdent trop de droits)
+En dehors des robots qui scannent l'intégralité du net à la recherche de failles connues, il ne faut pas négliger le potentiel de nuissance des utilisateurs *autorisés* de l'application. (Ce qui peut être aggravé aussi par les risques de mauvaises manipulations pour les rôles utilisateurs qui possèdent trop de droits).
 
 ![pirates](./lol.png)
 
@@ -193,7 +193,7 @@ Votre serveur web peut être pris pour cible pour plusieurs raisons:
   * ses capacités en terme de calcul et d'accès au réseau (pour les spambots, des DDOS, du stockage de fichiers)
   * pour le plaisir
   * pour les données qu'il abrite 
-    * les mots de passe des users sont souvent identiques d'un site à l'autre
+    * les mots de passe des utilisateurs sont souvent identiques d'un site à l'autre
     * il se peut que certaines données ne soient pas destinées à être publiques
   * pour nuir, pour du chantage (un site rendu inaccessible par un DOS)
  
@@ -203,7 +203,7 @@ Votre serveur web peut être pris pour cible pour plusieurs raisons:
 
 ## La connaissance
 
-Si vous ne voulez pas vous apercevoir un matin que google à bloqué votre site ou que votre client vous apelle affolé vous devez acquérir un minimum de connaissances en terme de sécurité.
+Si vous ne voulez pas vous apercevoir un matin que google à bloqué votre site ou que votre client vous apelle affolé, vous devez acquérir un minimum de connaissances en terme de sécurité.
 
 La **difficulté** principale est de l'ordre de la connaissance
 
@@ -223,9 +223,9 @@ Le vecteur d'attaque utilisera sans doute un élément dont vous ignoriez l'exis
 
 ## La connaissance
 
-Pour permettre aux développeurs de travailler sans imposer une formation professionelle de dix ans les outils mis en place fournissent des **niveaux d'abstraction**.
+Pour permettre aux développeurs de travailler sans imposer une formation professionelle de dix ans, les outils mis en place fournissent des **niveaux d'abstraction**.
 
-Les failles de sécurité utilisent le plus souvent des **cas limites** des ces abstractions. Et si vous voulez progresser il faudra toujours essayer de voir plus loin que les abstractions que vous manipulez. Effectivement, il n'y a pas de fin, mais cela fera de vous un meilleur développeur, jour après jour.
+Les failles de sécurité utilisent le plus souvent des **cas limites** de ces abstractions. Et si vous voulez progresser, il faudra toujours essayer de voir plus loin que les abstractions que vous manipulez. Effectivement, il n'y a pas de fin, mais cela fera de vous un meilleur développeur, jour après jour.
 
 > All non-trivial abstractions, to some degree, are leaky<br/>
 --Joel Spolsky<br/>
@@ -251,7 +251,7 @@ La grande différence entre du code produit par un débutant et celui produit pa
 
 Le code marche (il fais la tâche bizarre qui lui est demandé).
 
-Mais s'il est utilisé en dehors du cadre pour lequel il a été pensé il peut échouer de façon plus ou moins brutale. Cela va de la génération de WARNING (accès à une clef non existante) à du crash complet (accès à un attribut inexistant).
+Mais s'il est utilisé en dehors du cadre pour lequel il a été pensé, il peut échouer de façon plus ou moins brutale. Cela va de la génération de WARNING (accès à une clef non existante) au crash complet (accès à un attribut inexistant).
 
 --------------------------------------------------------------------------------
 
@@ -307,12 +307,12 @@ La robustesse est importante en terme de sécurité parce que l'attaquant **ne v
 
 ## Un code peu robuste est non sécurisé
 
-Un des aspects important de l'attaque de sécurité est l'utilisation du code et des outils qui sont en place en les **détournants** (hijacking).
+Un des aspects important de l'attaque de sécurité est l'utilisation du code et des outils qui sont en place en les **détournant** (hijacking).
 L'attaquant se sert de tout ce qui est présent et en détourne l'usage.
 
- * Tout erreur qui démontre une **absence de robustesse** est potentiellement un vecteur d'attaque
+ * Toute erreur qui démontre une **absence de robustesse** est potentiellement un vecteur d'attaque
 
-De la même manièrse qu'en mathématique la phrase magique *"Si x est différent de 0"* devait devenir un mode de pensée obligatoire, le développeur devrait toujours penser aux **cas limites**, à ce qui arrive quand le contrat n'est pas respecté, quand on ne respecte pas les règles.
+De la même manière qu'en mathématiques, la phrase magique *"Si x est différent de 0"* devait devenir un mode de pensée obligatoire, le développeur devrait toujours penser aux **cas limites**, à ce qui arrive quand le contrat n'est pas respecté, quand on ne respecte pas les règles.
 
 ![Quelles règles?](licence.gif)
 
@@ -445,13 +445,13 @@ Le site web est rendu inaccessible, ce qui ouvre la voie aux concurrents ou au c
 Il y a plusieurs vecteurs
 
   * monopolisation des ressources (sockets, mémoire, processus serveur, disque dur, etc)
-  * traitements trop longs (donc monopolisation du CPU en fait)
+  * traitements trop longs (donc monopolisation du CPU)
   * destruction des ressources (crash serveur)
   * autres (cache poisonning, DNS poisoning, ...)
 
-Une variante : le DDOS, déni de service distribué la charge d'attaque est répartie sur un grand nombre de machines qui sont alors plus difficles à bloquer.
+Une variante : le DDOS, déni de service distribué ; la charge d'attaque est répartie sur un grand nombre de machines qui sont alors plus difficles à bloquer.
 
-Du côté de développeur web on pense souvent qu'il n'y a pas grand chose à faire, que c'est essentiellement aux couches d'administration système de trouver des parades. Mais en réalité un excès de confiance dans les paramètres recus par le programme est souvent en cause.
+Du côté du développeur web, on pense souvent qu'il n'y a pas grand chose à faire, que c'est essentiellement aux couches d'administration système de trouver des parades. Mais en réalité un excès de confiance dans les paramètres recus par le programme est souvent en cause.
 
 --------------------------------------------------------------------------------
 
@@ -461,19 +461,19 @@ On parle ici de fuites d'informations. Faire fuir des information c'est par exem
 
 Une simple recherche goole sur "Notice undefined index in /var/www" me renvoit sur ce site:
 ![http://www.dmkimmo.com/fiche.html?aid=](undefinex_index.png)
-Je connais dès lors le language mais aussi les chemins réèls sur le disque (et je peux estimer sans trop de riques que le site n'est pas très sécurisé).
+Je connais dès lors le langage mais aussi les chemins réels sur le disque (et je peux estimer sans trop de riques que le site n'est pas très sécurisé).
 
-Il est souvent très utile de connâitre ces chemins pour retrouver les chemins relatifs vers les fichiers intéressants comme /etc/passwd.
+Il est souvent très utile de connaitre ces chemins pour retrouver les chemins relatifs vers les fichiers intéressants comme /etc/passwd.
 
 --------------------------------------------------------------------------------
 
 # Information Disclosure
 
-Mais cet affichage d'informations qui aident vos attaquants se cachent à de multiples endroits:
+Mais ces informations qui aident vos attaquants se cachent à de multiples endroits:
 
 ![Apache and PHP versions](info_disclosure2.png)
 
-Ici nous avons la version d'Apache httpd, la version de PHP, l'OS (gentoo) et même la version d'OpenSSL.
+Ici, nous avons la version d'Apache httpd, la version de PHP, l'OS (gentoo) et même la version d'OpenSSL.
 
 --------------------------------------------------------------------------------
 
@@ -500,11 +500,11 @@ Comparez avec les entêtes du site reddit
 
 Retenez:
 
-  * Il ne faut pas faciliter la tâche à votre assaillant.
+  * Il ne faut pas faciliter la tâche à votre assaillant
   * Ne lui donnez pas la liste des failles qu'il peut tenter
   * Un serveur qui "parle" trop incite l'assaillant à tenter plus de choses, cela démontre un faible niveau de sécurité
   * Chaque information peut-être réutilisée (pensez social engineering)
-  * Si vous affichez des information inutiles, pensez à tromper votre assaillant
+  * Si vous affichez des informations inutiles, pensez à tromper votre assaillant
 
 --------------------------------------------------------------------------------
 
@@ -582,7 +582,7 @@ Le **XSS** (Cross Site Scripting) est votre pire ennemi.
     !html
     <img src=<? echo $user['picture_path]; ?>">
 
-Obtenez ceci
+Obtenez ceci:
 
     !html
      <img src=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A
@@ -602,17 +602,17 @@ Qui signifie:
 
 ### GET et POST : ce n'est pas la même chose
 
-Ils sont tous les deux manipulables, de ce point de vue là pas de différences. Mais:
+Ils sont tous les deux manipulables, de ce point de vue là, pas de différences. Mais:
 
 > GET est **indempotent**
 
   * Une requêtes GET peut être rejouée n fois sans risques
   * Une requête GET ne doit jamais conduire à une modification du SI
-  * ce serait bien pratiques parfois?
+  * Ce serait bien pratique parfois?
     * Passez par une confirmation via formulaire puis POST
     * Ou bien utiliser du javascript et de l'ajax pour passer une requête POST
 
-Il y a des liens GET partout dans une page, et le navigateur les chargent sans vous demander, il peut même le faire depuis un site distant.
+Il y a des liens GET partout dans une page, et le navigateur les charge sans vous demander, il peut même le faire depuis un site distant.
 
     !html
     <IMG SRC='/user/logout' /> <!-- dans un commentaire c'est #?!^" -->
@@ -667,14 +667,14 @@ La réponse ressemblera à ceci
     
     <html>deface!</html>
 
-Il y a deux réponses, la première fais une taille de 0, la seconde une taille de 20 et contient le contenu HTML injecté.
-S'il y a un serveur de cache devant ce serveur et si vous enchaînez une autre requête dans cette même connection TCP/IP vous pouvez forcer le contenu la réponse à cette nouvelle requête à ce "deface:". Il faut jouer avec les entêtes de gestion de validité des pages pour les différents serveurs de cache. 
+Il y a deux réponses, la première fait une taille de 0, la seconde une taille de 20 et contient le contenu HTML injecté.
+S'il y a un serveur de cache devant ce serveur et si vous enchaînez une autre requête dans cette même connection TCP/IP vous pouvez forcer le contenu de la réponse à cette nouvelle requête à ce "deface:". Il faut jouer avec les entêtes de gestion de validité des pages pour les différents serveurs de cache. 
 
 --------------------------------------------------------------------------------
 
 ## Injection - HTTP
 
-En l'occurence sur des versions récentes de PHP il est impossible d'injecter un retour à la ligne dans un Header HTTP. Ce n'est pas le cas dans tous les languages.
+En l'occurence, sur des versions récentes de PHP, il est impossible d'injecter un retour à la ligne dans un Header HTTP. Ce n'est pas le cas dans tous les languages.
 
 Il existe aussi des variantes encore plus complexes qui jouent sur les différences d'interprétation de requêtes HTMl mal formées entre les serveurs proxys et les serveurs webs.
 
@@ -693,7 +693,7 @@ Le cas classique est un formulaire de login, le programme reçoit deux arguments
   * le login utilisateur
   * le mot de passe utilisateur
 
-Et il fais une requête SQL pour vérifier que les deux correspondent. d'une horrible manière:
+Et il fait une requête SQL pour vérifier que les deux correspondent ... d'une horrible manière:
 
     !php
     $login = $_POST['login']; $password = $_POST['password'];
@@ -720,7 +720,7 @@ Le jeu consiste alors à insérer du SQL dans la requête ...
 L'injection SQl est très connue car elle est puissante. Elle permet de passer outre les **sécurités d'accès**, de **détruire** ou de modifier des données (UPDATE, INSERT, DELETE, TRUNCATE) voir d'**extraire n'importe quelle information** de la base (requêtes UNION, requête sur information_schema, time-based attacks).
 
 Il existe des moyens de s'en protéger. Certains sont bons, d'autres sont très bons, d'autres très mauvais.
-Nous allons regarder certains de ces moyens puisqu'ils nous permettront de mieux apréhender le chapitre suivant qui parlera justement des protections.
+Nous allons regarder certains de ces moyens puisqu'ils nous permettront de mieux appréhender le chapitre suivant qui parlera justement des protections.
 
 --------------------------------------------------------------------------------
 
@@ -754,7 +754,7 @@ Ceci transforme les quotes ' en \'. C'est **très insuffisant**.
 
 ### Méthode 2: utiliser les requêtes paramétrées
 
-C'est une protection ultime (tant que la librairie qui abstrait votre connexion à la base fais bien ce qu'elle prétends faire).
+C'est une protection ultime (tant que la librairie qui abstrait votre connexion à la base fait bien ce qu'elle prétend faire).
 
     !php
     $sql = "SELECT id FROM users WHERE `login`=:login"
@@ -767,7 +767,7 @@ C'est une protection ultime (tant que la librairie qui abstrait votre connexion 
 
 Le moteur SQL reçoit d'un côté la requête SQL et de l'autre les arguments à insérer dans cette requête.
 
-Le requêtes est compilée sous la forme d'un arbre d'éxecution **AVANT** que les arguments ne soient ajoutés dans cette requête.
+La requête est compilée sous la forme d'un arbre d'éxecution **AVANT** que les arguments ne soient ajoutés dans cette requête.
 Ces arguments ne pourront donc **JAMAIS** être eux-mêmes interprétés comme du SQL.
 
 Pas d'injection!
@@ -776,7 +776,7 @@ Pas d'injection!
 
 ## Injection - SQL
 
-Et comme on n'est jamais assez prudent on peut aussi bâtir du SQl incassable à des endroits clefs comme le login. Ceci est la requête SQL générée par la librairie Zend Framework:
+Et comme on n'est jamais assez prudent, on peut aussi bâtir du SQl incassable à des endroits clefs comme le login. Ceci est la requête SQL générée par la librairie Zend Framework:
 
     !sql
     SELECT *, (CASE WHEN password = 'user \'password'
@@ -784,7 +784,7 @@ Et comme on n'est jamais assez prudent on peut aussi bâtir du SQl incassable à
     FROM users
     WHERE name = 'user\' name'
 
-Et ceci est un extrait di code qui produit cette requête:
+Et ceci est un extrait du code qui produit cette requête:
 
     !php
     $credentialExpression = new Zend_Db_Expr(
@@ -834,7 +834,7 @@ Un code **robuste**, plus verbeux sans doute. Une requête complexifiée. Mais e
 
 ## Sécurité en profondeur
 
-## blindage de configuration
+## Blindage de configuration
 
 --------------------------------------------------------------------------------
 
@@ -844,11 +844,11 @@ Un code **robuste**, plus verbeux sans doute. Une requête complexifiée. Mais e
 
  * **K**eep **I**t **S**tupid **S**imple
 
-Décomposez les tâches complexes en sous-ensemble simples, apréhendables
+Décomposez les tâches complexes en sous-ensemble simples, appréhendables
 
 ## Boîte Noire, Flux In flux Out
 
-Chacune de ces tâches peut être vues comme une boîte qui accepte des entrées et génère des sorties
+Chacune de ces tâches peut être vue comme une boîte qui accepte des entrées et génère des sorties:
 
                   +-----+
      $arg2------->|XXXXX|
@@ -861,7 +861,7 @@ Chacune de ces tâches peut être vues comme une boîte qui accepte des entrées
 
 ## Boîte Noire, Flux In flux Out
 
-La boîte noire se décompose elle-même en un sous ensemble de boîtes qui interragissent. Il y a des flux entrants et sortants pour chacune.
+La boîte noire se décompose elle-même en un sous-ensemble de boîtes qui interagissent. Il y a des flux entrants et sortants pour chacune.
 
     +-+        +-+ <-+----------+<----+-+---+
     |X|--+---->|X|   |          |     |X|   |
@@ -895,25 +895,25 @@ Ce principe est aussi applicable à l'ensemble.
 ## Validez les entrées
 
  * Rejetez ce que vous pouvez
- * la plus simple des entrées est un entier
+ * La plus simple des entrées est un entier
 Exemple :
 
     $foo = (int) $_GET['foo'];
 
- * vérifiez les tailles min/max
- * utilisez des listes blanches si possible
+ * Vérifiez les tailles min/max
+ * Utilisez des listes blanches si possible
 
         if ( ! in_array($_GET['foo'],array('red','green','blue'))) {
 
- * essayez de rester dans l'ascii7 agrémenté quelques caractères (-,_)
+ * Essayez de rester dans l'ascii7 agrémenté de quelques caractères (-,_)
 
 --------------------------------------------------------------------------------
 
 ## Validez les entrées
 
- * le texte brut est par nature complexe (encoding utf-8?)
+ * Le texte brut est par nature complexe (encoding utf-8?)
 ![XKCD 1137 RTL](./rtl.png)
- * si vous souhaitez dès la validation des entrées n'accepter qu'un sous ensemble du HTML faites très attention aux expressions régulières
+ * Si vous souhaitez dès la validation des entrées n'accepter qu'un sous ensemble du HTML, faites très attention aux expressions régulières
  [HTML can't be parsed by regex](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454)
  * faites attention aux messages de rejets, c'est peut-être ce message d'erreur qui est ciblé par le contenu.
 
@@ -923,13 +923,13 @@ source XKCD: [http://www.xkcd.com/1137/](http://www.xkcd.com/1137/)
 
 ## Filtrez les sorties
 
-Les règles d'**échappement** sont propres à chaques sorties et visent à éviter le principe des attaques par **injection**.
+Les règles d'**échappement** sont propres à chaque sortie et visent à éviter le principe des attaques par **injection**.
 
  * Une page HTML est composée de balises HTML, le caractère dangereux est donc **'<'**, mais ce n'est pas le seul, vous devez passer par l'encodage de caractères HTML ('<' => &amp;lt; 'é' => &amp;eacute;)
- * Une url possède un certains nombre de caractères particuliers, il faut passer par l'**encodage d'URL** (espace => %20, '=' => %3D, etc.)
+ * Une url possède un certain nombre de caractères particuliers, il faut passer par l'**encodage d'URL** (espace => %20, '=' => %3D, etc.)
  * Un fichier csv possède des caractères séparateurs (',' souvent), des délimiteurs parfois (comme "), ne gère par les retours à la ligne, etc. Il faut gérer ces éléments dans votre filtre de sortie
- * un nom de fichier sur disque possède des limitations propres à l'OS (et attention aux '..') .
- * Vous communiquez avec le SGBD en SQL, le SQL à ses propres échappements, le plus connu est "\'" pour la quote "'".
+ * Un nom de fichier sur disque possède des limitations propres à l'OS (et attention aux '..') .
+ * Vous communiquez avec le SGBD en SQL, le SQL a ses propres échappements, le plus connu est "\'" pour la quote "'".
 
 Le point important est que ces filtrages sont **propres à chaque sortie**, ils ne doivent normalement pas être effectués à la validation, en entrée, puisqu'ils sont différents en fonction des canaux de sortie.
 
@@ -943,15 +943,15 @@ Si vous ne devez retenir que deux choses retenez ces éléments là.
 
 **Validation** des entrées, **filtrage** des sorties.
 
-Face à un projet essayez d'identifier très vite les éléments qui servent à ces deux tâches. Dans certains projets les dénominations et l'organisation des classes rendent ces éléments évidents, comme dans [Zend Framework](http://framework.zend.com/manual/1.12/fr/zend.filter.input.html). Mais cela est parfois plus complexe.
+Face à un projet essayez d'identifier très vite les éléments qui servent à ces deux tâches. Dans certains projets, les dénominations et l'organisation des classes rendent ces éléments évidents, comme dans [Zend Framework](http://framework.zend.com/manual/1.12/fr/zend.filter.input.html). Mais cela est parfois plus complexe.
 
-On trouve le vocabulaire **escape** pour les sorties, on trouve souvent un premier niveau de filtrage des la validation des entrées. Mais pas toujours...
+On trouve le vocabulaire **escape** pour les sorties. On trouve souvent un premier niveau de filtrage dès la validation des entrées. Mais pas toujours...
 
 Beaucoup de projets rendent ces éléments complexes à identifier (exemple type: [wordpress](http://stackoverflow.com/questions/9404505/why-does-wordpress-still-use-addslashes-register-globals-and-magic-quotes)). Les risques sont alors multiples, double filtrage, validations insuffisantes, filtrages invalides, etc. On trouve alors de nombreux modules très mal écrits en terme de sécurité et qui deviennent autant de failles potentielles.
 
 --------------------------------------------------------------------------------
 
-# Un projet peu être très mauvais en terme de sécurité et avoir du succès.
+# Un projet peut être très mauvais en terme de sécurité et avoir du succès.
 
 Ne surestimez pas vos pairs, encore moins les utilisateurs, et surtout, pensez aux commerciaux.
 
@@ -963,9 +963,9 @@ Seulement voilà, vous ne pourrez pas dire que vous ne saviez pas, vous avez sui
 
  * Bâtissez pour durer
  * Isolez les parties 'habillage' du coeur de métier.
- * renforcez le coeur
+ * Renforcez le coeur
  * Cloisonnez
- * Si vous prenez des risques prenez les sur des éléments isolés
+ * Si vous prenez des risques, prenez les sur des éléments isolés
 
 --------------------------------------------------------------------------------
 
@@ -976,7 +976,7 @@ Ce principe est le deuxième grand principe (après les validations et filtrages
 > Ne faites jamais confiances aux étapes précédant votre code pour bloquer les attaques!
 
  * Vous limiterez les dégats en cas de faille
- * Vous compliquerez la découverte des failles (en cas d'absence de réponse positive l'assaillant ne sait peut-être pas qu'il avait passé avec succès l'une des barrières)
+ * Vous compliquerez la découverte des failles (en cas d'absence de réponse positive, l'assaillant ne sait peut-être pas qu'il avait passé avec succès l'une des barrières)
 
 > Soyez paranoïaques, on parle de systèmes automatisés, ces systèmes ont très peu de bon sens, ils peuvent laisser entrer un éléphant dans votre salon si celui-ci conduit votre voiture, porte votre cravate et possède les clefs de la maison.
 ![BANKSY](./banksy.jpg)
@@ -985,17 +985,17 @@ Ce principe est le deuxième grand principe (après les validations et filtrages
 
 --------------------------------------------------------------------------------
 
-# blindage de configuration
+# Blindage de configuration
 
 .notes: Grumpf
 
 Ce principe est l'une des applications du principe précédent. Une application sécurisée n'existe pas si le système d'information qui héberge cette application n'est pas pris en compte.
 
-Ceci concerne sans doute moins le développeur que son accolyte responsable de la configuration du système d'information, le **sysadmin**. On rencontre aussi très souvent quelqu'un qui est un peu mauvais (j(j'assume, j'en suis) dans les deux xomaines et que l'on nomme **dev-op**, il a cependant assez de connaissance dans les deux domaines pour essayer de faire la jonction.
+Ceci concerne sans doute moins le développeur que son accolyte responsable de la configuration du système d'information, le **sysadmin**. On rencontre aussi très souvent quelqu'un qui est un peu mauvais (j'assume, j'en suis) dans les deux domaines et que l'on nomme **dev-op**, il a cependant assez de connaissances dans les deux domaines pour essayer de faire la jonction.
 
-En terme de sécurité cette jonction est importante. Il faut trouver les bon sréglages pour autoriser les fonctionnalités attendues sans ouvrir de failles de sécurité.
+En terme de sécurité, cette jonction est importante. Il faut trouver les bons réglages pour autoriser les fonctionnalités attendues sans ouvrir de failles de sécurité.
 
-Pour aujourd'hui je ne vous ferais pas un cours détaillé sur l'administration système. mais je liste quelques principes:
+Pour aujourd'hui, je ne vous ferais pas un cours détaillé sur l'administration système mais je liste quelques principes:
 
   * isolement, cloisonnement
   * restriction de droits, création de rôles par droits
