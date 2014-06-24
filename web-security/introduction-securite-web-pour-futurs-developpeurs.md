@@ -580,7 +580,7 @@ Le **XSS** (Cross Site Scripting) est votre pire ennemi.
 ## Injection - Javascript
 
     !html
-    <img src=<? echo $user['picture_path]; ?>">
+    <img src=<? echo $user['picture_path']; ?>">
 
 Obtenez ceci:
 
@@ -697,8 +697,8 @@ Et il fait une requête SQL pour vérifier que les deux correspondent ... d'une 
 
     !php
     $login = $_POST['login']; $password = $_POST['password'];
-    $sql = "SELECT id FROM users WHERE `login`=PASSWORD('$login')";
-    $sql .= " and `password`='$password'";
+    $sql = "SELECT id FROM users WHERE `login`='$login'";
+    $sql .= " and `password`=PASSWORD('$password')";
     $result = $db->query($sql);
     if (count( $result) > 0) {
         (...)
@@ -783,7 +783,7 @@ Et comme on n'est jamais assez prudent, on peut aussi bâtir du SQl incassable �
     SELECT *, (CASE WHEN password = 'user \'password'
        THEN 1 ELSE 0 END) AS zend_auth_credential_match
     FROM users
-    WHERE name = 'user\' name'
+    WHERE name = 'user\' name';
 
 Et ceci est un extrait du code qui produit cette requête:
 
@@ -828,13 +828,13 @@ Il y a cependant un piège dans cette requète:
     SELECT *, (CASE WHEN password = 'user \'password'
        THEN 1 ELSE 0 END) AS zend_auth_credential_match
     FROM users
-    WHERE name = 'user\' name'
+    WHERE name = 'user\' name';
 
 --------------------------------------------------------------------------------
 
 ## Injection - SQL
 
-La méthode "_credentielTreatment" n'est sans doute pas définie et la requête se fait en comparant le mote de passe **en clair**.
+La méthode "_credentialTreatment" n'est sans doute pas définie et la requête se fait en comparant le mote de passe **en clair**.
 
 Il ne devrais **jamais** exister de mots de passe stockés en clair dans une base de donnée. **Jamais**.
 
