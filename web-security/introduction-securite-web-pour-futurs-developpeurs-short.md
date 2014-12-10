@@ -762,3 +762,26 @@ Pour aujourd'hui, je ne vous ferais pas un cours détaillé sur l'administration
   * connaissance des paramètres de configuration
   * conservatisme (le bon sysadmin est souvent moins *hype* que le développeur web)
 
+--------------------------------------------------------------------------------
+
+# Une dernière pour la route?
+
+    GRANT ALL PRIVILEGES ON `db_user1`.* TO 'user1'@'%';
+    GRANT ALL PRIVILEGES ON `db_user2`.* TO 'user2'@'%';
+    GRANT ALL PRIVILEGES ON `db_user%`.* TO 'user%'@'localhost';
+    GRANT SELECT ON `db_user%`.`foo` TO 'bar'@'localhost';
+
+![FUN](./fun.gif)
+
+--------------------------------------------------------------------------------
+
+# Une dernière pour la route?
+
+    GRANT ALL PRIVILEGES ON `db\_user1`.* TO 'user1'@'%';
+    GRANT ALL PRIVILEGES ON `db\_user2`.* TO 'user2'@'%';
+    GRANT ALL PRIVILEGES ON `db\_user\%`.* TO 'user%'@'localhost';
+    GRANT SELECT ON `db_user%`.`foo` TO 'bar'@'localhost';
+
+![FUN](./fun.gif)
+
+> The “_” and “%” wildcards are permitted when specifying database names in GRANT statements that grant privileges at the global or database levels.

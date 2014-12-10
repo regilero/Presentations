@@ -1049,3 +1049,26 @@ Egor Homakov:
 [How I hacked Github again](http://homakov.blogspot.fr/2014/02/how-i-hacked-github-again.html)
 
 
+--------------------------------------------------------------------------------
+
+# Une dernière pour la route?
+
+    GRANT ALL PRIVILEGES ON `db_user1`.* TO 'user1'@'%';
+    GRANT ALL PRIVILEGES ON `db_user2`.* TO 'user2'@'%';
+    GRANT ALL PRIVILEGES ON `db_user%`.* TO 'user%'@'localhost';
+    GRANT SELECT ON `db_user%`.`foo` TO 'bar'@'localhost';
+
+![FUN](./fun.gif)
+
+--------------------------------------------------------------------------------
+
+# Une dernière pour la route?
+
+    GRANT ALL PRIVILEGES ON `db\_user1`.* TO 'user1'@'%';
+    GRANT ALL PRIVILEGES ON `db\_user2`.* TO 'user2'@'%';
+    GRANT ALL PRIVILEGES ON `db\_user\%`.* TO 'user%'@'localhost';
+    GRANT SELECT ON `db_user%`.`foo` TO 'bar'@'localhost';
+
+![FUN](./fun.gif)
+
+> The “_” and “%” wildcards are permitted when specifying database names in GRANT statements that grant privileges at the global or database levels.
