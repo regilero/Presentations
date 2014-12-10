@@ -784,4 +784,4 @@ Pour aujourd'hui, je ne vous ferais pas un cours détaillé sur l'administration
 
 ![FUN](./fun.gif)
 
-> The “_” and “%” wildcards are permitted when specifying database names in GRANT statements that grant privileges at the global or database levels.
+> MYSQL: The “_” and “%” wildcards are permitted when specifying database names in GRANT statements that grant privileges at the global or database levels.
