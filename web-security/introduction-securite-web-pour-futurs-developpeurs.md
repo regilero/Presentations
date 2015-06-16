@@ -123,7 +123,7 @@ Du côté obscur de la force le chemin plus facile semble...
 
 # Ethical Hacking
 
-Pour ma part j'espère que toutes les connaissances que vous réussirez à acquérir seront utilisées pour créer et non le contraire.dd
+Pour ma part j'espère que toutes les connaissances que vous réussirez à acquérir seront utilisées pour créer et non le contraire.
 
 Devenir un expert dans le domaine peut devenir complexe car il faut pouvoir apréhender un grand nombre de domaines.
 
@@ -459,13 +459,13 @@ Une variante : le DDOS, déni de service distribué ; la charge d'attaque est r�
 
 ![503](./503.png)
 
-Du côté du développeur web, on pense souvent qu'il n'y a pas grand chose à faire, que c'est essentiellement aux couches d'administration système de trouver des parades. Mais en réalité un excès de confiance dans les paramètres recus par le programme est souvent en cause.
+Du côté du développeur web, on pense souvent qu'il n'y a pas grand chose à faire, que c'est essentiellement aux couches d'administration système de trouver des parades. Mais, en réalité, un excès de confiance dans les paramètres recus par le programme est souvent en cause.
 
 --------------------------------------------------------------------------------
 
 # Information Disclosure
 
-On parle ici de fuites d'informations. Faire fuir des information c'est par exemple afficher les messages d'erreur à l'utilisateur.
+On parle ici de **fuites d'informations**. Faire fuir des information c'est par exemple afficher les messages d'erreur à l'utilisateur.
 
 Une simple recherche goole sur "Notice undefined index in /var/www" me renvoit sur ce site:
 ![http://www.dmkimmo.com/fiche.html?aid=](undefinex_index.png)
@@ -717,7 +717,7 @@ Et il fait une requête SQL pour vérifier que les deux correspondent ... d'une 
     if (count( $result) > 0) {
         (...)
 
-Le jeu consiste alors à insérer du SQL dans la requête ...
+Le jeu consiste alors à insérer du SQL dans la requête SQL ...
 
 --------------------------------------------------------------------------------
 
@@ -889,7 +889,7 @@ Chacune de ces tâches peut être vue comme une boîte qui accepte des entrées 
 
 La boîte noire se décompose elle-même en un sous-ensemble de boîtes qui interagissent. Il y a des flux entrants et sortants pour chacune.
 
-![Black Boxes](black_boxes.png)
+![Black Boxes](inception.gif)
 
 Ce principe est aussi applicable à l'ensemble. 
 

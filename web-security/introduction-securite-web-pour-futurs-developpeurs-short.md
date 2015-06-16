@@ -125,11 +125,13 @@ Du côté obscur de la force le chemin plus facile semble...
 
 # Ethical Hacking
 
-Pour ma part j'espère que toutes les connaissances que vous réussirez à acquérir seront utilisées pour créer et non le contraire.dd
+Pour ma part j'espère que toutes les connaissances que vous réussirez à acquérir seront utilisées pour créer et non le contraire.
 
 Devenir un expert dans le domaine peut devenir complexe car il faut pouvoir apréhender un grand nombre de domaines.
 
 Mais il s'agit le plus souvent de recettes et d'habitudes à prendre, de contrôler des choses déjà compilées par vos pairs.
+
+ * **[OWASP](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)**
 
 # Hacker vs Cracker
 
@@ -308,8 +310,8 @@ Diffuser l'information pour mieux se protéger, mais aussi pour en comprendre le
   * Escalade de privilèges?
   * Type de vulnerabilité
 
-  * [CVE-1999-1293](http://cvedetails.com/cve/CVE-1999-1293/)
-  * [CVE-2013-1643](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1643)
+  * [CVE-1999-1293](http://cvedetails.com/cve/CVE-1999-1293/) mod_proxy, DOS, core dump (10.0)
+  * [CVE-2013-1643](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1643) PHP SOAP
 --------------------------------------------------------------------------------
 
 # Les principales Failles
@@ -318,10 +320,13 @@ Diffuser l'information pour mieux se protéger, mais aussi pour en comprendre le
 --------------------------------------------------------------------------------
 
 # Les principales Failles
+
 
 ## Déni de Service
 
+
 ## Information Disclosure
+
 
 ## Injection
 
@@ -338,21 +343,12 @@ Le site web est rendu **inaccessible**, ce qui ouvre la voie aux **concurrents**
 
 ![poussez-vous](./dos.jpg)
 
---------------------------------------------------------------------------------
-
-# Déni de service - DOS
-
-Une variante : le DDOS, déni de service distribué ; la charge d'attaque est répartie sur un grand nombre de machines qui sont alors plus difficiles à bloquer.
-
-![503](./503.png)
-
-Du côté du développeur web, on pense souvent qu'il n'y a pas grand chose à faire, que c'est essentiellement aux couches d'administration système de trouver des parades. **Mais en réalité un excès de confiance dans les paramètres recus par le programme est souvent en cause.**
 
 --------------------------------------------------------------------------------
 
 # Information Disclosure
 
-On parle ici de fuites d'informations. Faire fuir des information c'est par exemple afficher les messages d'erreur à l'utilisateur.
+On parle ici de **fuites d'informations**. Faire fuir des information c'est par exemple afficher les messages d'erreur à l'utilisateur.
 
 Une simple recherche goole sur "Notice undefined index in /var/www" me renvoit sur ce site:
 ![http://www.dmkimmo.com/fiche.html?aid=](undefinex_index.png)
@@ -470,7 +466,7 @@ Et le résultat::
      onLoad="alert('xss');">
     <input type="checkbox">
 
-En javascript on peut faire **tout** ce qui est imaginable en HTML, et **plus encore**. Détourner du contenu, poster des requêtes de façon transparentes, charger d'autres sources javascript depuis d'autres sites, etc.
+En javascript on peut faire **TOUT** ce qui est imaginable en HTML, et **plus encore**. Détourner du contenu, poster des requêtes de façon transparentes, charger d'autres sources javascript depuis d'autres sites, etc.
 
 Le **XSS** (Cross Site Scripting) est votre pire ennemi.
 
@@ -502,10 +498,50 @@ Il y a des liens GET partout dans une page, et le navigateur les charge sans vou
 
 ## Injection - HTTP
 
- - "Empoisonnement de cache"
+Mon petit violon d'Ingres.
+
+ - "Empoisonnement de cache", "Contrebande HTTP", "Division de réponse"
+ - jouer sur les interpretations différentes de messages HTTP entre les serveurs caches et les serveurs applicatifs
  - injecter du contenu de "header +body HTTP" dans un Header HTTP comme "Location".
- - jouer sur les interpretations différentes d'erreurs HTTP entre les serveurs caches et les serveurs applicatifs
- - ...
+ - jouer sur la taille des messages transmis (Content-Length, Chunked Transfer, dépassements d'entiers, etc)
+ - **[HAProxy](http://www.haproxy.org/)** est votre meilleur allié
+
+--------------------------------------------------------------------------------
+
+## Injection - HTTP
+
+Trouvez les deux erreurs dans ces entêtes HTTP:
+
+    HTTP/1.1 200 OK
+    Date: Thu, 23 Apr 2015 14:55:13 GMT
+    Server: Apache
+    Content-Type: text/plain
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=300, public
+    Content-Length: 250
+    Connection: keep-alive
+    Content-Length: 10
+    Transfer-Encoding: chunked
+
+--------------------------------------------------------------------------------
+
+## Injection - HTTP
+
+Trouvez les deux erreurs dans ces entêtes HTTP:
+
+    HTTP/1.1 200 OK
+    Date: Thu, 23 Apr 2015 14:55:13 GMT
+    Server: Apache
+    Content-Type: text/plain
+    Access-Control-Allow-Origin: *
+    Cache-Control: max-age=300, public
+    Content-Length: 250    <----------------------------------
+    Connection: keep-alive
+    Content-Length: 10     <----------------------------------
+    Transfer-Encoding: chunked     <--------------------------
+
+* Deux entêtes Content-Length, lequel à raison ?
+* Content-Length + chunks : lequel à raison ?
 
 --------------------------------------------------------------------------------
 
@@ -522,13 +558,13 @@ Et il fait une requête SQL pour vérifier que les deux correspondent ... d'une 
 
     !php
     $login = $_POST['login']; $password = $_POST['password'];
-    $sql = "SELECT id FROM users WHERE `login`=PASSWORD('$login')";
-    $sql .= " and `password`='$password'";
+    $sql = "SELECT id FROM users WHERE `login`='$login'";
+    $sql .= " and `password`=PASSWORD($password)";
     $result = $db->query($sql);
     if (count( $result) > 0) {
         (...)
 
-Le jeu consiste alors à insérer du SQL dans la requête ...
+Le jeu consiste alors à insérer du SQL dans la requête SQL ...
 
 --------------------------------------------------------------------------------
 
@@ -546,7 +582,6 @@ Ou encore
 L'injection SQl est très connue car elle est puissante. Elle permet de passer outre les **sécurités d'accès**, de **détruire** ou de modifier des données (UPDATE, INSERT, DELETE, TRUNCATE) voir d'**extraire n'importe quelle information** de la base (requêtes UNION, requête sur information_schema, time-based attacks).
 
 Il existe des moyens de s'en protéger. Certains sont bons, d'autres sont très bons, d'autres très mauvais.
-Nous allons regarder en détails certaines de ces méthodes pour mieux appréhender le chapitre suivant qui parlera justement des protections.
 
 --------------------------------------------------------------------------------
 
@@ -635,7 +670,7 @@ Chacune de ces tâches peut être vue comme une boîte qui accepte des entrées 
 
 La boîte noire se décompose elle-même en un sous-ensemble de boîtes qui interagissent. Il y a des flux entrants et sortants pour chacune.
 
-![Black Boxes](black_boxes.png)
+![Black Boxes](inception.gif)
 
 Ce principe est aussi applicable à l'ensemble. 
 
@@ -655,16 +690,25 @@ Ce principe est aussi applicable à l'ensemble.
 
  * Rejetez ce que vous pouvez
  * La plus simple des entrées est un entier
+
 Exemple :
 
+    !php
     $foo = (int) $_GET['foo'];
+    
 
- * Vérifiez les tailles min/max
+ * Vérifiez les **tailles** min/max
  * Utilisez des listes blanches si possible
 
-        if ( ! in_array($_GET['foo'],array('red','green','blue'))) {
+Exemple :
 
- * Essayez de rester dans l'ascii7 agrémenté de quelques caractères (-,_)
+    !php
+    if ( ! in_array($_GET['foo'],array('red','green','blue'))) {
+       throw new WTFException("Only 'red', 'green' and 'blue' values are allowed");
+    }
+
+
+ * Essayez de rester dans l'**ascii7** agrémenté de quelques caractères ( '-', '_' ).
 
 --------------------------------------------------------------------------------
 
@@ -682,17 +726,17 @@ source XKCD: [http://www.xkcd.com/1137/](http://www.xkcd.com/1137/)
 
 ## Filtrez les sorties
 
-Les règles d'**échappement** sont propres à chaque sortie et visent à éviter le principe des attaques par **injection**.
+Les règles d'**échappement** sont **propres à chaque sortie** et visent à éviter le principe des attaques par **injection**.
 
- * Une page HTML est composée de balises HTML, le caractère dangereux est donc **'<'**, mais ce n'est pas le seul, vous devez passer par l'encodage de caractères HTML ('<' => &amp;lt; 'é' => &amp;eacute;)
- * Une url possède un certain nombre de caractères particuliers, il faut passer par l'**encodage d'URL** (espace => %20, '=' => %3D, etc.)
- * Un fichier csv possède des caractères séparateurs (',' souvent), des délimiteurs parfois (comme "), ne gère par les retours à la ligne, etc. Il faut gérer ces éléments dans votre filtre de sortie
- * Un nom de fichier sur disque possède des limitations propres à l'OS (et attention aux '..') .
- * Vous communiquez avec le SGBD en SQL, le SQL a ses propres échappements, le plus connu est "\'" pour la quote "'".
+ * **Page HTML** -> balises HTML -> encodage de caractères HTML ('<' => &amp;lt; 'é' => &amp;eacute;)
+ * **url** -> encodage d'URL -> (espace => %20, '=' => %3D, etc.)
+ * Fichier **CSV** -> séparateurs ',' ; des délimiteurs '"', retours chariots, etc.
+ * Fichier sur disque: chemins, caractères spéciaux
+ * SGBD -> échapper le SQL, paramétrer
 
-Le point important est que ces filtrages sont **propres à chaque sortie**, ils ne doivent normalement pas être effectués à la validation, en entrée, puisqu'ils sont différents en fonction des canaux de sortie.
+Ces filtrages sont **propres à chaque sortie** ==> ils ne doivent normalement pas être effectués à la validation, en entrée, puisqu'ils sont différents en fonction des canaux de sortie.
 
-Une sortie non ou mal filtrée est la base de la majorité des attaques de sécurité dans le domaine du web.
+**Une sortie non ou mal filtrée est la base de la majorité des attaques de sécurité dans le domaine du web.**
 
 --------------------------------------------------------------------------------
 
@@ -700,31 +744,9 @@ Une sortie non ou mal filtrée est la base de la majorité des attaques de sécu
 
 Si vous ne devez retenir que deux choses retenez ces éléments là.
 
-**Validation** des entrées, **filtrage** des sorties.
+**Validation** des entrées, **Filtrage** des sorties.
 
-Face à un projet essayez d'identifier très vite les éléments qui servent à ces deux tâches. Dans certains projets, les dénominations et l'organisation des classes rendent ces éléments évidents, comme dans [Zend Framework](http://framework.zend.com/manual/1.12/fr/zend.filter.input.html). Mais cela est parfois plus complexe.
-
-On trouve le vocabulaire **escape** pour les sorties. On trouve souvent un premier niveau de filtrage dès la validation des entrées. Mais pas toujours...
-
-Beaucoup de projets rendent ces éléments complexes à identifier (exemple type: [wordpress](http://stackoverflow.com/questions/9404505/why-does-wordpress-still-use-addslashes-register-globals-and-magic-quotes)). Les risques sont alors multiples, double filtrage, validations insuffisantes, filtrages invalides, etc. On trouve alors de nombreux modules très mal écrits en terme de sécurité et qui deviennent autant de failles potentielles.
-
---------------------------------------------------------------------------------
-
-# Un projet peut être très mauvais en terme de sécurité et avoir du succès.
-
-Ne surestimez pas vos pairs, encore moins les utilisateurs, et, surtout, pensez aux commerciaux.
-
-Un produit sécurisé est souvent identique fonctionnellement au même produit sans la sécurité et sans la robustesse. Que vaut la sécurité quand les plates-formes changent tous les ans, que le marché s'emballe pour la nouveauté?
-
-> Jusqu'ici tout va bien...
-
-Seulement voilà, vous ne pourrez pas dire que vous ne saviez pas, vous avez suivi ce cours. Vous savez maintenant que les standards du métier imposent de ... valider les entrées et filtrer les sorties.
-
- * Bâtissez pour durer
- * Isolez les parties 'habillage' du coeur de métier.
- * Renforcez le coeur
- * Cloisonnez
- * Si vous prenez des risques, prenez les sur des éléments isolés
+Face à un projet essayez d'identifier très vite les éléments qui servent à ces deux tâches.
 
 --------------------------------------------------------------------------------
 
@@ -744,9 +766,19 @@ Ce principe est le deuxième grand principe (après les validations et filtrages
 
 --------------------------------------------------------------------------------
 
-# Blindage de configuration
+# Un projet peut être très mauvais en terme de sécurité et avoir du succès.
 
-.notes: Grumpf
+Ne surestimez pas vos pairs, encore moins les utilisateurs, et, surtout, pensez aux commerciaux.
+
+Un produit sécurisé est souvent identique fonctionnellement au même produit sans la sécurité et sans la robustesse.
+
+**Que vaut la sécurité quand les plates-formes changent tous les ans, que le marché s'emballe pour la nouveauté?**
+
+> Jusqu'ici tout va bien...
+
+--------------------------------------------------------------------------------
+
+# Blindage de configuration
 
 Ce principe est l'une des applications du principe précédent. Une application sécurisée n'existe pas si le système d'information qui héberge cette application n'est pas pris en compte.
 
