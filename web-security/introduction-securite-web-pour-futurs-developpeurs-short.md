@@ -87,6 +87,7 @@ Il faut donc analyser votre application de façon globale
   * code source public/privé ?
   * réutilisation du code sur d'autres métiers ?
   * hébergement privé/partagé
+  * entrées et sorties de l'application
   * ...
 
 Mais attention à ne pas sous-doser.
@@ -765,6 +766,12 @@ Ce principe est le deuxième grand principe (après les validations et filtrages
 (photo elephant : banksy)
 
 --------------------------------------------------------------------------------
+
+# Auto-testez vous
+
+ * Prenez l'habitude de tester votre application avec des contenus *limites*
+ * utilisez des outils: metasploit, nessus, etc.
+ * utilisez vos collègues (bounty)
 
 # Un projet peut être très mauvais en terme de sécurité et avoir du succès.
 
