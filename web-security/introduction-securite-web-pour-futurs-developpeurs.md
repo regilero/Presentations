@@ -87,6 +87,7 @@ Il faut donc analyser votre application de façon globale
   * code source public/privé?
   * réutilisation du code sur d'autres métiers?
   * hébergement privé/partagé
+  * entrées et sorties de l'application
   * ...
 
 Mais attention à ne pas sous-doser.
@@ -964,24 +965,6 @@ Beaucoup de projets rendent ces éléments complexes à identifier (exemple type
 
 --------------------------------------------------------------------------------
 
-# Un projet peut être très mauvais en terme de sécurité et avoir du succès.
-
-Ne surestimez pas vos pairs, encore moins les utilisateurs, et surtout, pensez aux commerciaux.
-
-Un produit sécurisé est souvent identique fonctionnellement au même produit sans la sécurité et sans la robustesse. Que vaut la sécurité quand les plates-formes changent tous les ans, que le marché s'emballe pour la nouveauté?
-
-> Jusqu'ici tout va bien...
-
-Seulement voilà, vous ne pourrez pas dire que vous ne saviez pas, vous avez suivi ce cours. Vous savez maintenant que les standards du métier imposent de ... valider les entrées et filtrer les sorties.
-
- * Bâtissez pour durer
- * Isolez les parties 'habillage' du coeur de métier.
- * Renforcez le coeur
- * Cloisonnez
- * Si vous prenez des risques, prenez les sur des éléments isolés
-
---------------------------------------------------------------------------------
-
 # Sécurité en profondeur
 
 Ce principe est le deuxième grand principe (après les validations et filtrages). Les différentes couches, ou strates, d'un système d'information ont **toujours** des failles. Ne faites jamais une confiance aveugle aux autres briques de la solution.
@@ -998,9 +981,35 @@ Ce principe est le deuxième grand principe (après les validations et filtrages
 
 --------------------------------------------------------------------------------
 
-# Blindage de configuration
+# Auto-testez vous
 
-.notes: Grumpf
+ * Prenez l'habitude de tester votre application avec des contenus *limites*
+ * utilisez des outils: metasploit, nessus, etc.
+ * utilisez vos collègues (bounty)
+
+# Un projet peut être très mauvais en terme de sécurité et avoir du succès.
+
+Ne surestimez pas vos pairs, encore moins les utilisateurs, et, surtout, pensez aux commerciaux.
+
+Un produit sécurisé est souvent identique fonctionnellement au même produit sans la sécurité et sans la robustesse.
+
+**Que vaut la sécurité quand les plates-formes changent tous les ans, que le marché s'emballe pour la nouveauté?**
+
+> Jusqu'ici tout va bien...
+
+--------------------------------------------------------------------------------
+
+# Quelques idées
+
+ * Bâtissez pour durer
+ * Isolez les parties 'habillage' du coeur de métier.
+ * Renforcez le coeur
+ * Cloisonnez
+ * Si vous prenez des risques, prenez les sur des éléments isolés
+
+--------------------------------------------------------------------------------
+
+# Blindage de configuration
 
 Ce principe est l'une des applications du principe précédent. Une application sécurisée n'existe pas si le système d'information qui héberge cette application n'est pas pris en compte.
 
