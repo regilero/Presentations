@@ -2,21 +2,21 @@
 
 --------------------------------------------------------------------------------
 
-# Pourquoi?
+# Pourquoi ?
 
 Demain, dans 6 mois, l'année prochaine, ou même peut-être hier, vous mettrez en ligne un site internet.
 Ou bien on vous demandera de participer à la réalisation d'un de ces sites.
 
- * Êtes-vous capable de juger du niveau de sécurité de ce site?
- * Avez-vous respecté les bonnes pratiques du métier?
- * Saurez-vous poser les bonnes questions?
- * Est-ce que l'on va vous rappeler un dimanche matin à 2h du matin?
+ * Êtes-vous capable de juger du niveau de sécurité de ce site ?
+ * Avez-vous respecté les bonnes pratiques du métier ?
+ * Saurez-vous poser les bonnes questions ?
+ * Est-ce-que l'on va vous rappeler un dimanche à 2h du matin ?
 
 --------------------------------------------------------------------------------
 
-# Pourquoi?
+# Pourquoi ?
 
-Mais aussi parce que réfléchir aux problématiques de la sécurité pour vos programmes:
+Mais aussi parce-que réfléchir aux problématiques de la sécurité pour vos programmes :
 
   * est très formateur
   * vous demande de lire des documentations 
@@ -25,7 +25,7 @@ Mais aussi parce que réfléchir aux problématiques de la sécurité pour vos p
 
 --------------------------------------------------------------------------------
 
-# Amusant?
+# Amusant ?
 
 .notes: ...Oui
 
@@ -35,7 +35,7 @@ Mais aussi parce que réfléchir aux problématiques de la sécurité pour vos p
 
 --------------------------------------------------------------------------------
 
-# Amusant?
+# Amusant ?
 
   * Voyez cela comme un **défi**
   * Trouver des **failles** dans un système est une pensée très proche de la pensée qui permet de concevoir ces systèmes. Mais c'est une pensée plus récréative.
@@ -50,9 +50,9 @@ Vous augmenterez le niveau de sécurité de façon **ludique** avant d'avoir à 
 
 --------------------------------------------------------------------------------
 
-# La sécurité?
+# La sécurité ?
 
-Le domaine de la sécurité est très vaste. Il regroupe des éléments plus larges que ceux que nous aborderons pour la sécurité web:
+Le domaine de la sécurité est très vaste. Il regroupe des éléments plus larges que ceux que nous aborderons pour la sécurité web :
 
  * les procédures humaines autour du système d'information
  * les failles dans le comportement humain (social engineering)
@@ -70,7 +70,7 @@ Le domaine de la sécurité est très vaste. Il regroupe des éléments plus lar
 
 Quand le niveau de sécurité augmente, le **niveau de confort descend** (le plus souvent).
 
-Si le niveau de sécurité en place est trop fort, les utilisateurs mettrons en place des moyens dérivés qui ruinerons le travail effectué.
+Si le niveau de sécurité en place est trop fort, les utilisateurs mettront en place des moyens dérivés qui ruineront le travail effectué.
 
 ![trouver le juste niveau difficile il sera](./too_much_security.jpg)
 
@@ -82,10 +82,10 @@ Une fois que vous aurez acquis des connaissances en terme de sécurité, il faud
 
 Il faut donc analyser votre application de façon globale
 
-  * contenu dynamique/statique?
-  * contributions privées/publiques?
-  * code source public/privé?
-  * réutilisation du code sur d'autres métiers?
+  * contenu dynamique/statique ?
+  * contributions privées/publiques ?
+  * code source public/privé ?
+  * réutilisation du code sur d'autres métiers ?
   * hébergement privé/partagé
   * entrées et sorties de l'application
   * ...
@@ -151,13 +151,13 @@ Eric S. Raymond
 
 # Hacker vs Cracker
 
-Dans le domaine particulier de la sécurité on utilise souvent deux termes pour distinguer ces individus:
+Dans le domaine particulier de la sécurité on utilise souvent deux termes pour distinguer ces individus :
 **Black Hat** et **White Hat**, la différence est la même que chez les magiciens.
 
 Ce qui fera la différence en terme de respect et en **termes juridiques** sur vos contributions dans ce domaine tient en quelques principes très simples:
 
  * ne diffusez pas publiquement de failles de sécurité exploitables, pas même sur les bug trackers publiques du projet. Pas de **0 day**.
- * signalez-les aux équipes dédiées et laissez leur le temps d'analyser et de corriger le problème
+ * signalez-les aux équipes dédiées et laissez-leur le temps d'analyser et de corriger le problème
  * soyez patients, ce temps peut être très long
  * la publication en désaccord avec les gestionnaires du projet peut exister mais doit être justifiable
  (non prise en compte de l'alerte, mise en danger des utilisateurs, etc.)
@@ -191,7 +191,7 @@ Mais vous travaillez sur leur terrain de jeu.
 
 ## Sérieusement
 
-Votre serveur web peut être pris pour cible pour plusieurs raisons:
+Votre serveur web peut être pris pour cible pour plusieurs raisons :
 
   * ses capacités en terme de calcul et d'accès au réseau (pour les spambots, des DDOS, du stockage de fichiers)
   * pour le plaisir
@@ -206,17 +206,17 @@ Votre serveur web peut être pris pour cible pour plusieurs raisons:
 
 ## La connaissance
 
-Si vous ne voulez pas vous apercevoir un matin que google à bloqué votre site ou que votre client vous apelle affolé, vous devez acquérir un minimum de connaissances en terme de sécurité.
+Si vous ne voulez pas vous apercevoir un matin que Google à bloqué votre site ou que votre client vous appelle affolé, vous devez acquérir un minimum de connaissances en terme de sécurité.
 
 La **difficulté** principale est de l'ordre de la connaissance
 
-  * Connaissez-vous vraiment le protocole HTTP?
-  * Maîtrisez-vous les différences subtiles entre un GET et un POST?
-  * Savez-vous ce que fais jQuery.ajax()?
-  * Connaissez-vous les cookies js? les cookies flash?
-  * Savez-vous à quoi sert le fichier crossdomain.xml?
-  * Saviez-vous que le svg pouvais contenir du javascript?
-  * Comprenez-vous quelque chose à openid?
+  * Connaissez-vous vraiment le protocole HTTP ?
+  * Maîtrisez-vous les différences subtiles entre un GET et un POST ?
+  * Savez-vous ce que fait jQuery.ajax() ?
+  * Connaissez-vous les cookies js ? les cookies flash ?
+  * Savez-vous à quoi sert le fichier crossdomain.xml ?
+  * Saviez-vous que le svg pouvait contenir du javascript ?
+  * Comprenez-vous quelque chose à openid ?
 
 Le vecteur d'attaque utilisera sans doute un élément dont vous ignoriez l'existence.
 
@@ -315,7 +315,7 @@ L'attaquant se sert de tout ce qui est présent et en détourne l'usage.
 
  * Toute erreur qui démontre une **absence de robustesse** est potentiellement un vecteur d'attaque
 
-De la même manière qu'en mathématiques, la phrase magique *"Si x est différent de 0"* devait devenir un mode de pensée obligatoire, le développeur devrait toujours penser aux **cas limites**, à ce qui arrive quand le contrat n'est pas respecté, quand on ne respecte pas les règles.
+De la même manière qu'en mathématiques, la phrase magique *"Si x est différent de 0"* devrait devenir un mode de pensée obligatoire, le développeur devrait toujours penser aux **cas limites**, à ce qui arrive quand le contrat n'est pas respecté, quand on ne respecte pas les règles.
 
 ![Quelles règles?](licence.gif)
 
@@ -390,7 +390,7 @@ Quelques exemples de dénominations d'attaques tirés de **[owasp.org](http://ww
 
 --------------------------------------------------------------------------------
 
-Et quelques grandes catégories:
+Et quelques grandes catégories :
 
   * Abuse of Functionality
   * Data Structure Attacks
@@ -443,12 +443,12 @@ Diffuser l'information pour mieux se protéger, mais aussi pour en comprendre le
 
 # Déni de service - DOS
 
-Le site web est rendu inaccessible, ce qui ouvre la voie aux concurrents ou au chantage. Il y a plusieurs vecteurs:
+Le site web est rendu inaccessible, ce qui ouvre la voie aux concurrents ou au chantage. Il y a plusieurs vecteurs :
 
   * monopolisation des ressources (sockets, mémoire, processus serveur, disque dur, etc)
   * traitements trop longs (donc monopolisation du CPU)
   * destruction des ressources (crash serveur)
-  * autres (cache poisonning, DNS poisoning, ...)
+  * autres (cache poisoning, DNS poisoning, ...)
 
 ![poussez-vous](./dos.jpg)
 
@@ -460,25 +460,25 @@ Une variante : le DDOS, déni de service distribué ; la charge d'attaque est r�
 
 ![503](./503.png)
 
-Du côté du développeur web, on pense souvent qu'il n'y a pas grand chose à faire, que c'est essentiellement aux couches d'administration système de trouver des parades. Mais, en réalité, un excès de confiance dans les paramètres recus par le programme est souvent en cause.
+Du côté du développeur web, on pense souvent qu'il n'y a pas grand-chose à faire, que c'est essentiellement aux couches d'administration système de trouver des parades. Mais, en réalité, un excès de confiance dans les paramètres recus par le programme est souvent en cause.
 
 --------------------------------------------------------------------------------
 
 # Information Disclosure
 
-On parle ici de **fuites d'informations**. Faire fuir des information c'est par exemple afficher les messages d'erreur à l'utilisateur.
+On parle ici de **fuites d'informations**. Faire fuir des informations c'est par exemple afficher les messages d'erreur à l'utilisateur.
 
-Une simple recherche goole sur "Notice undefined index in /var/www" me renvoit sur ce site:
+Une simple recherche Google sur "Notice undefined index in /var/www" me renvoit sur ce site :
 ![http://www.dmkimmo.com/fiche.html?aid=](undefinex_index.png)
-Je connais dès lors le langage mais aussi les chemins réels sur le disque (et je peux estimer sans trop de riques que le site n'est pas très sécurisé).
+Je connais dès lors le langage mais aussi les chemins réels sur le disque (et je peux estimer sans trop de risques que le site n'est pas très sécurisé).
 
-Il est souvent très utile de connaitre ces chemins pour retrouver les chemins relatifs vers les fichiers intéressants comme /etc/passwd.
+Il est souvent très utile de connaître ces chemins pour retrouver les chemins relatifs vers les fichiers intéressants comme /etc/passwd.
 
 --------------------------------------------------------------------------------
 
 # Information Disclosure
 
-Mais ces informations qui aident vos attaquants se cachent à de multiples endroits:
+Mais ces informations qui aident vos attaquants se cachent à de multiples endroits :
 
 ![Apache and PHP versions](info_disclosure2.png)
 
@@ -507,7 +507,7 @@ Comparez avec les entêtes du site reddit
 
 # Information Disclosure
 
-Retenez:
+Retenez :
 
   * Il ne faut pas faciliter la tâche à votre assaillant
   * Ne lui donnez pas la liste des failles qu'il peut tenter
@@ -522,7 +522,7 @@ Retenez:
 > Presque toutes les failles sont des failles d'injection, si on veut.
 -- Moi.
 
-En mieux:
+En mieux :
 
 > SQL injection is a special case of syntax tree mutation. *All* languages are susceptible to it, and everything is a langage. #langsec
  - twitter: active wreck chords @jcoglan
@@ -534,12 +534,12 @@ En mieux:
     !html
     <input type="text" name="search" value="<? echo $_GET['search']; ?>">
 
-Entrez ceci::
+Entrez ceci :
 
     !html
      What?"><h1>Oups</h1><input type="checkbox
 
-Et le résultat:
+Et le résultat :
 
     !html
     <input type="text" name="search" value="What?">
@@ -550,7 +550,7 @@ Et le résultat:
 
 ## Injection - HTML
 
-Pas grave? essayez:
+Pas grave ? essayez :
 
     !html
     "><div class="big-overlay"></form>
@@ -577,18 +577,18 @@ Entrez ceci:
     !html
      What?" onLoad="alert('xss');"><input type="checkbox
 
-Et le résultat::
+Et le résultat:
 
     !html
     <input type="text" name="search" value="What?"
      onLoad="alert('xss');">
     <input type="checkbox">
 
-En javascript on peut faire **tout** ce qui est imaginable en HTML, et **plus encore**. Détourner du contenu, poster des requêtes de façon transparentes, charger d'autres sources javascript depuis d'autres sites, etc.
+En javascript on peut faire **tout** ce qui est imaginable en HTML, et **plus encore**. Détourner du contenu, poster des requêtes de façon transparente, charger d'autres sources javascript depuis d'autres sites, etc.
 
 Le **XSS** (Cross Site Scripting) est votre pire ennemi.
 
-Les moteurs de **recherches** dans les sites et les codes 'SEO' sont très souvent sensibles.
+Les moteurs de **recherche** dans les sites et les codes 'SEO' sont très souvent sensibles.
 
 --------------------------------------------------------------------------------
 
@@ -608,7 +608,7 @@ Qui signifie:
     !html
     <img src=javascript:alert('xss')>
 
-  * [Quelques autres examples](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+  * [Quelques autres exemples](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
   * [d'autres failles plus récentes](http://html5sec.org/)
 
 --------------------------------------------------------------------------------
@@ -623,7 +623,7 @@ Ils sont tous les deux manipulables, de ce point de vue là, pas de différences
 
   * Une requêtes GET peut être rejouée n fois sans risques
   * Une requête GET ne doit jamais conduire à une modification du SI
-  * Ce serait bien pratique parfois?
+  * Ce serait bien pratique parfois ?
     * Passez par une confirmation via formulaire puis POST
     * Ou bien utiliser du javascript et de l'ajax pour passer une requête POST
 
@@ -637,14 +637,14 @@ Il y a des liens GET partout dans une page, et le navigateur les charge sans vou
 
 ## Injection - HTTP
 
-En exemple en rapport avec les techniques de **poisonning**, que l'on classifie dans le HTTP Response splitting:
+En exemple en rapport avec les techniques de **poisoning**, que l'on classifie dans le HTTP Response splitting :
 
     !php
     <?php
     // Set the Location Header for our redirect 302 page
     header ("Location: " . $_GET['page']); ?>
 
-La requête contient alors du contenu qui contient lui-même des entêtes HTTP
+La requête contient alors du contenu qui contient lui-même des entêtes HTTP :
 
     !html
     GET http://testsite.com/redir.php?site=%0d%0aContent-
@@ -664,7 +664,7 @@ Essayez de deviner ce qui arrive dans la réponse...
 
 ## Injection - HTTP
 
-La réponse ressemblera à ceci
+La réponse ressemblera à ceci :
 
     HTTP/1.1 302 Redirect
     Date: Mon, 09 Jun 2014 20:58:36 GMT
@@ -783,7 +783,7 @@ C'est une protection ultime (tant que la librairie qui abstrait votre connexion 
 
 Le moteur SQL reçoit d'un côté la requête SQL et de l'autre les arguments à insérer dans cette requête.
 
-La requête est compilée sous la forme d'un arbre d'éxecution **AVANT** que les arguments ne soient ajoutés dans cette requête.
+La requête est compilée sous la forme d'un arbre d'exécution **AVANT** que les arguments ne soient ajoutés dans cette requête.
 Ces arguments ne pourront donc **JAMAIS** être eux-mêmes interprétés comme du SQL.
 
 Pas d'injection!
@@ -837,7 +837,7 @@ Et ceci est un extrait du code qui produit cette requête:
 
 Un code **robuste**, plus verbeux sans doute. Une requête complexifiée. Mais elle est située à un endroit clef en terme de sécurité.
 
-Il y a cependant un piège dans cette requète:
+Il y a cependant un piège dans cette requête:
 
     !sql
     SELECT *, (CASE WHEN password = 'user \'password'
@@ -849,9 +849,9 @@ Il y a cependant un piège dans cette requète:
 
 ## Injection - SQL
 
-La méthode "_credentialTreatment" n'est sans doute pas définie et la requête se fait en comparant le mote de passe **en clair**.
+La méthode "_credentialTreatment" n'est sans doute pas définie et la requête se fait en comparant le mot de passe **en clair**.
 
-Il ne devrais **jamais** exister de mots de passe stockés en clair dans une base de donnée. **Jamais**.
+Il ne devrait **jamais** exister de mots de passe stockés en clair dans une base de donnée. **Jamais**.
 
 --------------------------------------------------------------------------------
 
@@ -876,7 +876,7 @@ Il ne devrais **jamais** exister de mots de passe stockés en clair dans une bas
 
  * **K**eep **I**t **S**tupid **S**imple
 
-Décomposez les tâches complexes en sous-ensemble simples, appréhendables
+Décomposez les tâches complexes en sous-ensembles simples, appréhendables
 
 ## Boîte Noire, Flux In flux Out
 
@@ -927,7 +927,7 @@ Exemple :
 
  * Le texte brut est par nature complexe (encoding utf-8?)
 ![XKCD 1137 RTL](./rtl.png)
- * Si vous souhaitez dès la validation des entrées n'accepter qu'un sous ensemble du HTML, faites très attention aux expressions régulières
+ * Si vous souhaitez dès la validation des entrées n'accepter qu'un sous-ensemble du HTML, faites très attention aux expressions régulières
  [HTML can't be parsed by regex](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454)
  * faites attention aux messages de rejets, c'est peut-être ce message d'erreur qui est ciblé par le contenu.
 
@@ -969,7 +969,7 @@ Beaucoup de projets rendent ces éléments complexes à identifier (exemple type
 
 Ce principe est le deuxième grand principe (après les validations et filtrages). Les différentes couches, ou strates, d'un système d'information ont **toujours** des failles. Ne faites jamais une confiance aveugle aux autres briques de la solution.
 
-> Ne faites jamais confiances aux étapes précédant votre code pour bloquer les attaques!
+> Ne faites jamais confiance aux étapes précédant votre code pour bloquer les attaques!
 
  * Vous limiterez les dégats en cas de faille
  * Vous compliquerez la découverte des failles (en cas d'absence de réponse positive, l'assaillant ne sait peut-être pas qu'il avait passé avec succès l'une des barrières)

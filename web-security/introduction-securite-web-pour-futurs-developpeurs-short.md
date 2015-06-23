@@ -2,21 +2,21 @@
 
 --------------------------------------------------------------------------------
 
-# Pourquoi?
+# Pourquoi ?
 
 Demain, dans 6 mois, l'année prochaine, ou même peut-être hier, vous mettrez en ligne un site internet.
 Ou bien on vous demandera de participer à la réalisation d'un de ces sites.
 
- * Êtes-vous capable de juger du niveau de sécurité de ce site?
- * Avez-vous respecté les bonnes pratiques du métier?
- * Saurez-vous poser les bonnes questions?
- * Est-ce que l'on va vous rappeler un dimanche matin à 2h du matin?
+ * Êtes-vous capable de juger du niveau de sécurité de ce site ?
+ * Avez-vous respecté les bonnes pratiques du métier ?
+ * Saurez-vous poser les bonnes questions ?
+ * Est-ce-que l'on va vous rappeler un dimanche à 2h du matin ?
 
 --------------------------------------------------------------------------------
 
-# Pourquoi?
+# Pourquoi ?
 
-Mais aussi parce que réfléchir aux problématiques de la sécurité pour vos programmes:
+Mais aussi parce-que réfléchir aux problématiques de la sécurité pour vos programmes :
 
   * est très formateur
   * vous demande de lire des documentations 
@@ -25,7 +25,7 @@ Mais aussi parce que réfléchir aux problématiques de la sécurité pour vos p
 
 --------------------------------------------------------------------------------
 
-# Amusant?
+# Amusant ?
 
 .notes: ...Oui
 
@@ -35,7 +35,7 @@ Mais aussi parce que réfléchir aux problématiques de la sécurité pour vos p
 
 --------------------------------------------------------------------------------
 
-# Amusant?
+# Amusant ?
 
   * Voyez cela comme un **défi**
   * Trouver des **failles** dans un système est une pensée très proche de la pensée qui permet de concevoir ces systèmes. Mais c'est une pensée plus récréative.
@@ -50,9 +50,9 @@ Vous augmenterez le niveau de sécurité de façon **ludique** avant d'avoir à 
 
 --------------------------------------------------------------------------------
 
-# La sécurité?
+# La sécurité ?
 
-Le domaine de la sécurité est très vaste. Il regroupe des éléments plus larges que ceux que nous aborderons pour la sécurité web:
+Le domaine de la sécurité est très vaste. Il regroupe des éléments plus larges que ceux que nous aborderons pour la sécurité web :
 
  * les procédures humaines autour du système d'information
  * les failles dans le comportement humain (social engineering)
@@ -82,10 +82,10 @@ Une fois que vous aurez acquis des connaissances en terme de sécurité, il faud
 
 Il faut donc analyser votre application de façon globale
 
-  * contenu dynamique/statique?
-  * contributions privées/publiques?
-  * code source public/privé?
-  * réutilisation du code sur d'autres métiers?
+  * contenu dynamique/statique ?
+  * contributions privées/publiques ?
+  * code source public/privé ?
+  * réutilisation du code sur d'autres métiers ?
   * hébergement privé/partagé
   * entrées et sorties de l'application
   * ...
@@ -147,13 +147,13 @@ Eric S. Raymond
 
 # Hacker vs Cracker
 
-Dans le domaine particulier de la sécurité on utilise souvent deux termes pour distinguer ces individus:
+Dans le domaine particulier de la sécurité on utilise souvent deux termes pour distinguer ces individus :
 **Black Hat** et **White Hat**, la différence est la même que chez les magiciens.
 
-Ce qui fera la différence en terme de respect et en **termes juridiques** sur vos contributions dans ce domaine tient en quelques principes très simples:
+Ce qui fera la différence en terme de respect et en **termes juridiques** sur vos contributions dans ce domaine tient en quelques principes très simples :
 
  * Ne diffusez pas publiquement de failles de sécurité exploitables, pas même sur les bug trackers publiques du projet. Pas de **0 day**.
- * Signalez-les aux équipes dédiées et laissez leur le temps d'analyser et de corriger le problème
+ * Signalez-les aux équipes dédiées et laissez-leur le temps d'analyser et de corriger le problème
  * Soyez patients, ce temps peut être très long
  * La publication en désaccord avec les gestionnaires du projet peut exister mais doit être justifiable
  (non prise en compte de l'alerte, mise en danger des utilisateurs, etc.)
@@ -165,7 +165,7 @@ Ce qui fera la différence en terme de respect et en **termes juridiques** sur v
 
 # Le développeur web dans tout ça
 
-Votre serveur web peut être pris pour cible pour plusieurs raisons:
+Votre serveur web peut être pris pour cible pour plusieurs raisons :
 
   * Ses **capacités** en terme de calcul et d'accès au réseau (pour les spambots, des DDOS, du stockage de fichiers)
   * Pour le plaisir
@@ -180,17 +180,17 @@ Votre serveur web peut être pris pour cible pour plusieurs raisons:
 
 ## La connaissance
 
-Si vous ne voulez pas vous apercevoir un matin que google à bloqué votre site ou que votre client vous apelle affolé, vous devez acquérir un minimum de connaissances en terme de sécurité.
+Si vous ne voulez pas vous apercevoir un matin que google à bloqué votre site ou que votre client vous appelle affolé, vous devez acquérir un minimum de connaissances en terme de sécurité.
 
 La **difficulté** principale est de l'ordre de la connaissance
 
-  * Connaissez-vous vraiment le protocole HTTP?
-  * Maîtrisez-vous les différences subtiles entre un GET et un POST?
-  * Savez-vous ce que fais jQuery.ajax()?
-  * Connaissez-vous les cookies js? les cookies flash?
-  * Savez-vous à quoi sert le fichier crossdomain.xml?
-  * Saviez-vous que le svg pouvais contenir du javascript?
-  * Comprenez-vous quelque chose à openid?
+  * Connaissez-vous vraiment le protocole HTTP ?
+  * Maîtrisez-vous les différences subtiles entre un GET et un POST ?
+  * Savez-vous ce que fait jQuery.ajax() ?
+  * Connaissez-vous les cookies js ? les cookies flash ?
+  * Savez-vous à quoi sert le fichier crossdomain.xml ?
+  * Saviez-vous que le svg pouvait contenir du javascript ?
+  * Comprenez-vous quelque chose à openid ?
 
 Le vecteur d'attaque utilisera sans doute un élément dont vous ignoriez l'existence.
 
@@ -287,9 +287,9 @@ L'attaquant se sert de tout ce qui est présent et en détourne l'usage.
 
  * Toute erreur qui démontre une **absence de robustesse** est potentiellement un vecteur d'attaque
 
-De la même manière qu'en mathématiques, la phrase magique *"Si x est différent de 0"* devait devenir un mode de pensée obligatoire, le développeur devrait toujours penser aux **cas limites**, à ce qui arrive quand le contrat n'est pas respecté, quand on ne respecte pas les règles.
+De la même manière qu'en mathématiques, la phrase magique *"Si x est différent de 0"* devrait devenir un mode de pensée obligatoire, le développeur devrait toujours penser aux **cas limites**, à ce qui arrive quand le contrat n'est pas respecté, quand on ne respecte pas les règles.
 
-![Quelles règles?](licence.gif)
+![Quelles règles ?](licence.gif)
 
 --------------------------------------------------------------------------------
 
@@ -301,14 +301,14 @@ De la même manière qu'en mathématiques, la phrase magique *"Si x est différe
 
   * [CVE](http://cve.mitre.org/) : **C**ommon **V**ulnerability **E**xposure
 
-Diffuser l'information pour mieux se protéger, mais aussi pour en comprendre les impacts:
+Diffuser l'information pour mieux se protéger, mais aussi pour en comprendre les impacts :
 
   * Impact sur la confidentialité
   * Impact sur l'intégrité des données
   * Impact sur la disponibilité
   * Complexité d'accès
-  * Authentification requise?
-  * Escalade de privilèges?
+  * Authentification requise ?
+  * Escalade de privilèges ?
   * Type de vulnerabilité
 
   * [CVE-1999-1293](http://cvedetails.com/cve/CVE-1999-1293/) mod_proxy, DOS, core dump (10.0)
@@ -335,12 +335,12 @@ Diffuser l'information pour mieux se protéger, mais aussi pour en comprendre le
 
 # Déni de service - DOS
 
-Le site web est rendu **inaccessible**, ce qui ouvre la voie aux **concurrents** ou au **chantage**. Il y a plusieurs vecteurs:
+Le site web est rendu **inaccessible**, ce qui ouvre la voie aux **concurrents** ou au **chantage**. Il y a plusieurs vecteurs :
 
   * monopolisation des ressources (sockets, mémoire, processus serveur, disque dur, etc)
   * traitements trop longs (donc monopolisation du CPU)
   * destruction des ressources (crash serveur)
-  * autres (cache poisonning, DNS poisoning, ...)
+  * autres (cache poisoning, DNS poisoning, ...)
 
 ![poussez-vous](./dos.jpg)
 
@@ -349,19 +349,19 @@ Le site web est rendu **inaccessible**, ce qui ouvre la voie aux **concurrents**
 
 # Information Disclosure
 
-On parle ici de **fuites d'informations**. Faire fuir des information c'est par exemple afficher les messages d'erreur à l'utilisateur.
+On parle ici de **fuites d'informations**. Faire fuir des informations c'est par exemple afficher les messages d'erreur à l'utilisateur.
 
-Une simple recherche goole sur "Notice undefined index in /var/www" me renvoit sur ce site:
+Une simple recherche Google sur "Notice undefined index in /var/www" me renvoit sur ce site :
 ![http://www.dmkimmo.com/fiche.html?aid=](undefinex_index.png)
-Je connais dès lors le **langage** mais aussi les **chemins** réels sur le disque (et je peux estimer sans trop de riques que le site n'est pas très sécurisé).
+Je connais dès lors le **langage** mais aussi les **chemins** réels sur le disque (et je peux estimer sans trop de risques que le site n'est pas très sécurisé).
 
-Il est souvent très utile de connaitre ces chemins pour retrouver les chemins relatifs vers les fichiers intéressants comme /etc/passwd.
+Il est souvent très utile de connaître ces chemins pour retrouver les chemins relatifs vers les fichiers intéressants comme /etc/passwd.
 
 --------------------------------------------------------------------------------
 
 # Information Disclosure
 
-Mais ces informations qui aident vos attaquants se cachent à de multiples endroits:
+Mais ces informations qui aident vos attaquants se cachent à de multiples endroits :
 
 ![Apache and PHP versions](info_disclosure2.png)
 
@@ -390,7 +390,7 @@ Comparez avec les entêtes du site reddit
 
 # Information Disclosure
 
-Retenez:
+Retenez :
 
   * Il ne faut pas faciliter la tâche à votre assaillant
   * Ne lui donnez pas la liste des failles qu'il peut tenter
@@ -405,7 +405,7 @@ Retenez:
 > Presque toutes les failles sont des failles d'injection, si on veut.
 -- Moi.
 
-En mieux:
+En mieux :
 
 > SQL injection is a special case of syntax tree mutation. *All* languages are susceptible to it, and everything is a langage. #langsec
  - twitter: active wreck chords @jcoglan
@@ -417,12 +417,12 @@ En mieux:
     !html
     <input type="text" name="search" value="<? echo $_GET['search']; ?>">
 
-Entrez ceci::
+Entrez ceci :
 
     !html
      What?"><h1>Oups</h1><input type="checkbox
 
-Et le résultat:
+Et le résultat :
 
     !html
     <input type="text" name="search" value="What?">
@@ -433,7 +433,7 @@ Et le résultat:
 
 ## Injection - HTML
 
-Pas grave? essayez:
+Pas grave ? essayez :
 
     !html
     " ><div class="big-overlay"></form>
@@ -455,12 +455,12 @@ Et vous avez un formulaire de login en popup, détourné vers un autre site.
     !html
     <input type="text" name="search" value="<? echo $_GET['search']; ?>">
 
-Entrez ceci:
+Entrez ceci :
 
     !html
      What?" onLoad="alert('xss');"><input type="checkbox
 
-Et le résultat::
+Et le résultat :
 
     !html
     <input type="text" name="search" value="What?"
@@ -471,7 +471,7 @@ En javascript on peut faire **TOUT** ce qui est imaginable en HTML, et **plus en
 
 Le **XSS** (Cross Site Scripting) est votre pire ennemi.
 
-Les moteurs de **recherches** dans les sites et les codes 'SEO' sont très souvent sensibles.
+Les moteurs de **recherche** dans les sites et les codes 'SEO' sont très souvent sensibles.
 
 --------------------------------------------------------------------------------
 
@@ -479,13 +479,13 @@ Les moteurs de **recherches** dans les sites et les codes 'SEO' sont très souve
 
 ### GET et POST : ce n'est pas la même chose
 
-Ils sont tous les deux manipulables, de ce point de vue là, pas de différences. Mais:
+Ils sont tous les deux manipulables, de ce point de vue là, pas de différences. Mais :
 
 > GET est **indempotent**
 
   * Une requêtes GET peut être rejouée n fois sans risques
   * Une requête GET ne doit jamais conduire à une modification du SI
-  * Ce serait bien pratique parfois?
+  * Ce serait bien pratique parfois ?
     * Passez par une confirmation via formulaire puis POST
     * Ou bien utiliser du javascript et de l'ajax pour passer une requête POST
 
@@ -511,7 +511,7 @@ Mon petit violon d'Ingres.
 
 ## Injection - HTTP
 
-Trouvez les deux erreurs dans ces entêtes HTTP:
+Trouvez les deux erreurs dans ces entêtes HTTP :
 
     HTTP/1.1 200 OK
     Date: Thu, 23 Apr 2015 14:55:13 GMT
@@ -528,7 +528,7 @@ Trouvez les deux erreurs dans ces entêtes HTTP:
 
 ## Injection - HTTP
 
-Trouvez les deux erreurs dans ces entêtes HTTP:
+Trouvez les deux erreurs dans ces entêtes HTTP :
 
     HTTP/1.1 200 OK
     Date: Thu, 23 Apr 2015 14:55:13 GMT
@@ -541,8 +541,8 @@ Trouvez les deux erreurs dans ces entêtes HTTP:
     Content-Length: 10     <----------------------------------
     Transfer-Encoding: chunked     <--------------------------
 
-* Deux entêtes Content-Length, lequel à raison ?
-* Content-Length + chunks : lequel à raison ?
+* Deux entêtes Content-Length, lequel a raison ?
+* Content-Length + chunks : lequel a raison ?
 
 --------------------------------------------------------------------------------
 
@@ -550,12 +550,12 @@ Trouvez les deux erreurs dans ces entêtes HTTP:
 
 Revenons à un cas simple. La plus connue. L'injection SQL.
 
-Le cas classique est un formulaire de login, le programme reçoit deux arguments depuis une requête POST:
+Le cas classique est un formulaire de login, le programme reçoit deux arguments depuis une requête POST :
 
   * le login utilisateur
   * le mot de passe utilisateur
 
-Et il fait une requête SQL pour vérifier que les deux correspondent ... d'une horrible manière:
+Et il fait une requête SQL pour vérifier que les deux correspondent ... d'une horrible manière :
 
     !php
     $login = $_POST['login']; $password = $_POST['password'];
@@ -588,7 +588,7 @@ Il existe des moyens de s'en protéger. Certains sont bons, d'autres sont très 
 
 ## Injection - SQL - protection
 
-### Méthode 0: échapper les quotes (houuuu)
+### Méthode 0 : échapper les quotes (houuuu)
 
     !php
     "SELECT id FROM users WHERE `login`='"
@@ -599,7 +599,7 @@ Il existe des moyens de s'en protéger. Certains sont bons, d'autres sont très 
 
 Ceci transforme les quotes ' en \'. C'est **très insuffisant**.
 
-### Méthode 1: utiliser les échappements officiels
+### Méthode 1 : utiliser les échappements officiels
 
     !php
     "SELECT id FROM users WHERE `login`='"
@@ -614,7 +614,7 @@ Ceci transforme les quotes ' en \'. C'est **très insuffisant**.
 
 ## Injection - SQL - Protection
 
-### Méthode 2: utiliser les requêtes paramétrées
+### Méthode 2 : utiliser les requêtes paramétrées
 
 C'est une protection ultime (tant que la librairie qui abstrait votre connexion à la base fait bien ce qu'elle prétend faire).
 
@@ -629,7 +629,7 @@ C'est une protection ultime (tant que la librairie qui abstrait votre connexion 
 
 Le moteur SQL reçoit d'un côté la requête SQL et de l'autre les arguments à insérer dans cette requête.
 
-La requête est compilée sous la forme d'un arbre d'éxecution **AVANT** que les arguments ne soient ajoutés dans cette requête.
+La requête est compilée sous la forme d'un arbre d'exécution **AVANT** que les arguments ne soient ajoutés dans cette requête.
 Ces arguments ne pourront donc **JAMAIS** être eux-mêmes interprétés comme du SQL.
 
 **Pas d'injection!**
@@ -657,11 +657,11 @@ Ces arguments ne pourront donc **JAMAIS** être eux-mêmes interprétés comme d
 
  * **K**eep **I**t **S**tupid **S**imple
 
-Décomposez les tâches complexes en sous-ensemble simples, appréhendables
+Décomposez les tâches complexes en sous-ensembles simples, appréhendables
 
 ## Boîte Noire, Flux In flux Out
 
-Chacune de ces tâches peut être vue comme une boîte qui accepte des entrées et génère des sorties:
+Chacune de ces tâches peut être vue comme une boîte qui accepte des entrées et génère des sorties :
 
 ![Black Box 1](in_out.png)
 
@@ -715,13 +715,13 @@ Exemple :
 
 ## Validez les entrées
 
- * Le texte brut est par nature complexe (encoding utf-8?)
+ * Le texte brut est par nature complexe (encoding utf-8 ?)
 ![XKCD 1137 RTL](./rtl.png)
- * Si vous souhaitez dès la validation des entrées n'accepter qu'un sous ensemble du HTML, faites très attention aux expressions régulières
+ * Si vous souhaitez dès la validation des entrées n'accepter qu'un sous-ensemble du HTML, faites très attention aux expressions régulières
  [HTML can't be parsed by regex](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454)
  * faites attention aux messages de rejets, c'est peut-être ce message d'erreur qui est ciblé par le contenu.
 
-source XKCD: [http://www.xkcd.com/1137/](http://www.xkcd.com/1137/)
+source XKCD : [http://www.xkcd.com/1137/](http://www.xkcd.com/1137/)
 
 --------------------------------------------------------------------------------
 
@@ -732,7 +732,7 @@ Les règles d'**échappement** sont **propres à chaque sortie** et visent à é
  * **Page HTML** -> balises HTML -> encodage de caractères HTML ('<' => &amp;lt; 'é' => &amp;eacute;)
  * **url** -> encodage d'URL -> (espace => %20, '=' => %3D, etc.)
  * Fichier **CSV** -> séparateurs ',' ; des délimiteurs '"', retours chariots, etc.
- * Fichier sur disque: chemins, caractères spéciaux
+ * Fichier sur disque : chemins, caractères spéciaux
  * SGBD -> échapper le SQL, paramétrer
 
 Ces filtrages sont **propres à chaque sortie** ==> ils ne doivent normalement pas être effectués à la validation, en entrée, puisqu'ils sont différents en fonction des canaux de sortie.
@@ -743,7 +743,7 @@ Ces filtrages sont **propres à chaque sortie** ==> ils ne doivent normalement p
 
 # Validate INPUT, filter OUTPUT
 
-Si vous ne devez retenir que deux choses retenez ces éléments là.
+Si vous ne devez retenir que deux choses, retenez ces éléments-là.
 
 **Validation** des entrées, **Filtrage** des sorties.
 
@@ -755,7 +755,7 @@ Face à un projet essayez d'identifier très vite les éléments qui servent à 
 
 Ce principe est le deuxième grand principe (après les validations et filtrages). Les différentes couches, ou strates, d'un système d'information ont **toujours** des failles. Ne faites jamais une confiance aveugle aux autres briques de la solution.
 
-> Ne faites jamais confiances aux étapes précédant votre code pour bloquer les attaques!
+> Ne faites jamais confiance aux étapes précédant votre code pour bloquer les attaques !
 
  * Vous limiterez les dégats en cas de faille
  * Vous compliquerez la découverte des failles (en cas d'absence de réponse positive, l'assaillant ne sait peut-être pas qu'il avait passé avec succès l'une des barrières)
@@ -775,11 +775,11 @@ Ce principe est le deuxième grand principe (après les validations et filtrages
 
 # Un projet peut être très mauvais en terme de sécurité et avoir du succès.
 
-Ne surestimez pas vos pairs, encore moins les utilisateurs, et, surtout, pensez aux commerciaux.
+Ne surestimez pas vos pairs, encore moins les utilisateurs, et surtout, pensez aux commerciaux.
 
 Un produit sécurisé est souvent identique fonctionnellement au même produit sans la sécurité et sans la robustesse.
 
-**Que vaut la sécurité quand les plates-formes changent tous les ans, que le marché s'emballe pour la nouveauté?**
+**Que vaut la sécurité quand les plates-formes changent tous les ans, que le marché s'emballe pour la nouveauté ?**
 
 > Jusqu'ici tout va bien...
 
@@ -793,7 +793,7 @@ Ceci concerne sans doute moins le développeur que son accolyte responsable de l
 
 En terme de sécurité, cette jonction est importante. Il faut trouver les bons réglages pour autoriser les fonctionnalités attendues sans ouvrir de failles de sécurité.
 
-Pour aujourd'hui, je ne vous ferais pas un cours détaillé sur l'administration système mais je liste quelques principes:
+Pour aujourd'hui, je ne vous ferais pas un cours détaillé sur l'administration système mais je liste quelques principes :
 
   * isolement, cloisonnement
   * restriction de droits, création de rôles par droits
@@ -803,7 +803,7 @@ Pour aujourd'hui, je ne vous ferais pas un cours détaillé sur l'administration
 
 --------------------------------------------------------------------------------
 
-# Une dernière pour la route?
+# Une dernière pour la route ?
 
     GRANT ALL PRIVILEGES ON `db_user1`.* TO 'user1'@'%';
     GRANT ALL PRIVILEGES ON `db_user2`.* TO 'user2'@'%';
@@ -814,7 +814,7 @@ Pour aujourd'hui, je ne vous ferais pas un cours détaillé sur l'administration
 
 --------------------------------------------------------------------------------
 
-# Une dernière pour la route?
+# Une dernière pour la route ?
 
     GRANT ALL PRIVILEGES ON `db\_user1`.* TO 'user1'@'%';
     GRANT ALL PRIVILEGES ON `db\_user2`.* TO 'user2'@'%';
