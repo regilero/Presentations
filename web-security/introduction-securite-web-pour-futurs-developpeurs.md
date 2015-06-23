@@ -113,7 +113,7 @@ En dehors des robots qui scannent l'intégralité du net à la recherche de fail
 En terme de **sécurité informatique** le savoir est ouvert et disponible.
 
  * Il est facile d'acquérir très vite les principales connaissances
- * Ce savoir peut être utiliser pour **créer** et **réparer** (makers, hackers) ou pour **détruire** (manque de maturité, retard de développement social et individuel, lulz, etc.)
+ * Ce savoir peut être utilisé pour **créer** et **réparer** (makers, hackers) ou pour **détruire** (manque de maturité, retard de développement social et individuel, lulz, etc.)
  * Peu d'enseignements officiels car ce double usage effraye
     
 ![Le chemin vers le côté obscure de la force plus aisé est](./yoda.jpg)
