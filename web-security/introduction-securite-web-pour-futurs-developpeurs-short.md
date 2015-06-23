@@ -27,7 +27,7 @@ Mais aussi parce-que réfléchir aux problématiques de la sécurité pour vos p
 
 # Amusant ?
 
-.notes : ...Oui
+.notes: ...Oui
 
 ...
 
@@ -763,7 +763,7 @@ Ce principe est le deuxième grand principe (après les validations et filtrages
 > Soyez paranoïaques, on parle de systèmes automatisés, ces systèmes ont très peu de bon sens, ils peuvent laisser entrer un éléphant dans votre salon si celui-ci conduit votre voiture, porte votre cravate et possède les clefs de la maison.
 ![BANKSY](./banksy.jpg)
 
-(photo elephant : banksy)
+(photo elephant: banksy)
 
 --------------------------------------------------------------------------------
 
